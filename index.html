@@ -93,18 +93,22 @@
       <span class="brand__text">BEST<b>COM</b><i>KZ</i></span>
     </a>
     <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="#videonablyudenie">Услуги</a>
-      <a href="#obekty">Объекты</a>
-      <a href="#o-kompanii">О компании</a>
-      <a href="#komanda">Команда</a>
-      <a href="#freedo" class="nav__freedo">FREEDO</a>
-      <a href="#kontakty">Контакты</a>
+      <a href="#videonablyudenie" data-i="t001">Услуги</a>
+      <a href="#obekty" data-i="t002">Объекты</a>
+      <a href="#o-kompanii" data-i="t003">О компании</a>
+      <a href="#komanda" data-i="t004">Команда</a>
+      <a href="#freedo" class="nav__freedo" data-i="t005">FREEDO</a>
+      <a href="#kontakty" data-i="t006">Контакты</a>
     </nav>
+    <div class="lang" role="group" aria-label="Язык сайта / Сайт тілі">
+      <button type="button" class="lang__btn is-active" data-lang="ru" lang="ru">Рус</button>
+      <button type="button" class="lang__btn" data-lang="kz" lang="kk">Қаз</button>
+    </div>
     <a class="btn btn--gold hdr__cta" href="https://wa.me/77000969967?text=Здравствуйте! Хочу бесплатный аудит безопасности объекта." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.4-.7-2.8-1.2-4.7-4-4.8-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.1.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.3 1.5Z"/></svg>
-      Бесплатный аудит
+      <span data-i="t000">Бесплатный аудит</span>
     </a>
-    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+    <button class="burger" id="burger" data-i-aria="a_menu" aria-label="Открыть меню" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -123,24 +127,24 @@
 
   <div class="hero__in">
     <div class="hero__copy">
-      <p class="chip chip--live rev" data-rev><i class="dot" aria-hidden="true"></i> Система активна · Атырау · 24/7</p>
-      <h1 class="hero__h rev" data-rev>
+      <p class="chip chip--live rev" data-rev data-i="t007"><i class="dot" aria-hidden="true"></i> Система активна · Атырау · 24/7</p>
+      <h1 class="hero__h rev" data-rev data-i="t008">
         <span class="hero__h-l1">Вы видите всё.</span>
         <span class="hero__h-l2">Вы не теряете <em>ничего.</em></span>
       </h1>
-      <p class="hero__sub rev" data-rev>Мы не продаём оборудование. Мы выстраиваем контур безопасности,
+      <p class="hero__sub rev" data-rev data-i="t009">Мы не продаём оборудование. Мы выстраиваем контур безопасности,
       в котором ваш объект работает честно — и ночью, и в выходные, и когда вас на нём нет.</p>
       <div class="hero__cta rev" data-rev>
-        <a class="btn btn--gold btn--lg" href="https://wa.me/77000969967?text=Здравствуйте! Хочу бесплатный аудит безопасности объекта." target="_blank" rel="noopener">Бесплатный аудит безопасности</a>
-        <a class="btn btn--ghost btn--lg" href="#videonablyudenie">8 направлений контроля</a>
+        <a class="btn btn--gold btn--lg" href="https://wa.me/77000969967?text=Здравствуйте! Хочу бесплатный аудит безопасности объекта." target="_blank" rel="noopener" data-i="t010">Бесплатный аудит безопасности</a>
+        <a class="btn btn--ghost btn--lg" href="#videonablyudenie" data-i="t011">8 направлений контроля</a>
       </div>
-      <p class="hero__note rev" data-rev>Отвечаем в течение 30 минут в рабочее время</p>
+      <p class="hero__note rev" data-rev data-i="t012">Отвечаем в течение 30 минут в рабочее время</p>
     </div>
 
     <!-- HUD: план объекта -->
     <div class="hero__hud rev" data-rev aria-hidden="true">
       <div class="hud">
-        <div class="hud__bar"><span>ПЛАН ОБЪЕКТА · КОНТУР 01</span><span class="hud__rec"><i></i>REC</span></div>
+        <div class="hud__bar"><span data-i="t013">ПЛАН ОБЪЕКТА · КОНТУР 01</span><span class="hud__rec" data-i="t014"><i></i>REC</span></div>
         <svg viewBox="0 0 320 240" class="hud__svg">
           <defs>
             <radialGradient id="sweep" cx="50%" cy="50%" r="50%">
@@ -163,15 +167,15 @@
             <text x="240" y="98">ACS·FaceID</text><text x="98" y="196">GATE-1</text>
           </g>
         </svg>
-        <div class="hud__foot"><span>датчики: 6/6</span><span>доступ: норма</span><span>тревог: 0</span></div>
+        <div class="hud__foot"><span data-i="t015">датчики: 6/6</span><span data-i="t016">доступ: норма</span><span data-i="t017">тревог: 0</span></div>
       </div>
     </div>
   </div>
 
   <div class="ticker" aria-hidden="true">
     <div class="ticker__track">
-      <span>Видеонаблюдение</span><i>◆</i><span>СКУД · Face ID</span><i>◆</i><span>Видеодомофоны</span><i>◆</i><span>Шлагбаумы</span><i>◆</i><span>Сигнализация</span><i>◆</i><span>Умные замки FREEDO</span><i>◆</i><span>Bitrix24</span><i>◆</i><span>AI-ассистенты</span><i>◆</i>
-      <span>Видеонаблюдение</span><i>◆</i><span>СКУД · Face ID</span><i>◆</i><span>Видеодомофоны</span><i>◆</i><span>Шлагбаумы</span><i>◆</i><span>Сигнализация</span><i>◆</i><span>Умные замки FREEDO</span><i>◆</i><span>Bitrix24</span><i>◆</i><span>AI-ассистенты</span><i>◆</i>
+      <span data-i="t018">Видеонаблюдение</span><i>◆</i><span data-i="t019">СКУД · Face ID</span><i>◆</i><span data-i="t020">Видеодомофоны</span><i>◆</i><span data-i="t021">Шлагбаумы</span><i>◆</i><span data-i="t022">Сигнализация</span><i>◆</i><span data-i="t023">Умные замки FREEDO</span><i>◆</i><span data-i="t024">Bitrix24</span><i>◆</i><span data-i="t025">AI-ассистенты</span><i>◆</i>
+      <span data-i="t026">Видеонаблюдение</span><i>◆</i><span data-i="t027">СКУД · Face ID</span><i>◆</i><span data-i="t028">Видеодомофоны</span><i>◆</i><span data-i="t029">Шлагбаумы</span><i>◆</i><span data-i="t030">Сигнализация</span><i>◆</i><span data-i="t031">Умные замки FREEDO</span><i>◆</i><span data-i="t032">Bitrix24</span><i>◆</i><span data-i="t033">AI-ассистенты</span><i>◆</i>
     </div>
   </div>
 </section>
@@ -181,19 +185,19 @@
   <div class="wrap stats__grid">
     <div class="stat rev" data-rev>
       <p class="stat__n"><span data-count="15">0</span><b>+</b></p>
-      <p class="stat__t">лет выстраиваем безопасность бизнеса в Казахстане</p>
+      <p class="stat__t" data-i="t034">лет выстраиваем безопасность бизнеса в Казахстане</p>
     </div>
     <div class="stat rev" data-rev>
       <p class="stat__n"><span data-count="20000">0</span><b>+</b></p>
-      <p class="stat__t">объектов под защитой — от квартир до заводов</p>
+      <p class="stat__t" data-i="t035">объектов под защитой — от квартир до заводов</p>
     </div>
     <div class="stat rev" data-rev>
       <p class="stat__n">24<b>/</b>7</p>
-      <p class="stat__t">объект остаётся под контролем — без выходных и праздников</p>
+      <p class="stat__t" data-i="t036">объект остаётся под контролем — без выходных и праздников</p>
     </div>
     <a class="stat stat--link rev" data-rev href="https://2gis.kz/atyrau/geo/70000001051373711" target="_blank" rel="noopener">
       <p class="stat__n">5,0<b>★</b></p>
-      <p class="stat__t">рейтинг в 2GIS Атырау — 71 отзыв клиентов →</p>
+      <p class="stat__t" data-i="t037">рейтинг в 2GIS Атырау — 71 отзыв клиентов →</p>
     </a>
   </div>
 </section>
@@ -201,9 +205,9 @@
 <!-- МАНИФЕСТ -->
 <section class="manifesto">
   <div class="wrap">
-    <p class="manifesto__t rev" data-rev>Камера не предотвращает потери.<br>
+    <p class="manifesto__t rev" data-rev data-i="t038">Камера не предотвращает потери.<br>
     <em>Контроль</em> — предотвращает.</p>
-    <p class="manifesto__s rev" data-rev>Поэтому мы проектируем не «набор техники», а систему: кто заходит, что происходит,
+    <p class="manifesto__s rev" data-rev data-i="t039">Поэтому мы проектируем не «набор техники», а систему: кто заходит, что происходит,
     где уязвимость — и что случится в первую секунду тревоги. Оборудование — лишь инструмент. Результат — управляемый объект.</p>
   </div>
 </section>
@@ -212,9 +216,9 @@
 <section class="svc" aria-label="Направления">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k">Контур 01 — физическая безопасность</p>
-      <h2 class="sechead__h">Пять систем. Один управляемый объект.</h2>
-      <p class="sechead__s">Каждая система закрывает свой тип потерь. Вместе они дают то, ради чего всё и делается:
+      <p class="sechead__k" data-i="t040">Контур 01 — физическая безопасность</p>
+      <h2 class="sechead__h" data-i="t041">Пять систем. Один управляемый объект.</h2>
+      <p class="sechead__s" data-i="t042">Каждая система закрывает свой тип потерь. Вместе они дают то, ради чего всё и делается:
       объект, о котором вы знаете всё — не приезжая на него.</p>
     </header>
 
@@ -223,21 +227,21 @@
       <!-- 1. Видеонаблюдение -->
       <article class="card card--photo card--wide rev" data-rev id="videonablyudenie">
         <figure class="card__media">
-          <img src="assets/cam-wall.webp" alt="Видеонаблюдение: камеры на фасаде объекта" width="1000" height="672" loading="lazy" decoding="async">
-          <figcaption class="card__badge">Контур 01 · наблюдение</figcaption>
+          <img src="assets/cam-wall.webp" alt="Видеонаблюдение: камеры на фасаде объекта" data-i-alt="a_cam" width="1000" height="672" loading="lazy" decoding="async">
+          <figcaption class="card__badge" data-i="t043">Контур 01 · наблюдение</figcaption>
         </figure>
         <div class="card__body">
           <p class="card__num">01</p>
-          <h3 class="card__h">Видеонаблюдение</h3>
-          <p class="card__t">Что происходит на объекте — видно с телефона из любой точки мира.
+          <h3 class="card__h" data-i="t044">Видеонаблюдение</h3>
+          <p class="card__t" data-i="t045">Что происходит на объекте — видно с телефона из любой точки мира.
           Спорные ситуации решает запись, а не чьи-то слова.</p>
           <ul class="card__spec">
-            <li><b>Закрывает потери:</b> недостачи на кассе и складе, «слово против слова», простои без объяснений</li>
-            <li><b>Вы получаете:</b> просмотр онлайн 24/7, архив событий, выгрузку записи по дате и времени</li>
-            <li><b>Объекты:</b> магазины, склады, офисы, паркинги, дворы ЖК, производство</li>
+            <li data-i="t046"><b>Закрывает потери:</b> недостачи на кассе и складе, «слово против слова», простои без объяснений</li>
+            <li data-i="t047"><b>Вы получаете:</b> просмотр онлайн 24/7, архив событий, выгрузку записи по дате и времени</li>
+            <li data-i="t048"><b>Объекты:</b> магазины, склады, офисы, паркинги, дворы ЖК, производство</li>
           </ul>
-          <p class="card__tags"><span>удалённый доступ</span><span>архив событий</span><span>ночная съёмка</span><span>проектирование</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует видеонаблюдение для объекта." target="_blank" rel="noopener">Обсудить объект в WhatsApp</a>
+          <p class="card__tags" data-i="t049"><span>удалённый доступ</span><span>архив событий</span><span>ночная съёмка</span><span>проектирование</span></p>
+          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует видеонаблюдение для объекта." target="_blank" rel="noopener" data-i="t050">Обсудить объект в WhatsApp</a>
         </div>
       </article>
 
@@ -256,14 +260,14 @@
         </div>
         <div class="card__body">
           <p class="card__num">02</p>
-          <h3 class="card__h">СКУД с Face&nbsp;ID</h3>
-          <p class="card__t">Дверь сама знает, кого пускать. Кто, когда и куда заходил — в журнале, а не в догадках.</p>
+          <h3 class="card__h" data-i="t051">СКУД с Face&nbsp;ID</h3>
+          <p class="card__t" data-i="t052">Дверь сама знает, кого пускать. Кто, когда и куда заходил — в журнале, а не в догадках.</p>
           <ul class="card__spec">
-            <li><b>Закрывает потери:</b> чужие в помещении, «пришёл к девяти» на словах, потерянные ключи и карты</li>
-            <li><b>Вы получаете:</b> доступ по лицу или карте, журнал входов, права по зонам и по времени</li>
+            <li data-i="t053"><b>Закрывает потери:</b> чужие в помещении, «пришёл к девяти» на словах, потерянные ключи и карты</li>
+            <li data-i="t054"><b>Вы получаете:</b> доступ по лицу или карте, журнал входов, права по зонам и по времени</li>
           </ul>
-          <p class="card__tags"><span>распознавание лиц</span><span>журнал доступа</span><span>права по зонам</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует СКУД с Face ID." target="_blank" rel="noopener">Обсудить в WhatsApp</a>
+          <p class="card__tags" data-i="t055"><span>распознавание лиц</span><span>журнал доступа</span><span>права по зонам</span></p>
+          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует СКУД с Face ID." target="_blank" rel="noopener" data-i="t056">Обсудить в WhatsApp</a>
         </div>
       </article>
 
@@ -282,31 +286,31 @@
         </div>
         <div class="card__body">
           <p class="card__num">03</p>
-          <h3 class="card__h">Видеодомофоны</h3>
-          <p class="card__t">Вы видите, кто у двери, и открываете удалённо — из офиса, из дома, из другого города.</p>
+          <h3 class="card__h" data-i="t057">Видеодомофоны</h3>
+          <p class="card__t" data-i="t058">Вы видите, кто у двери, и открываете удалённо — из офиса, из дома, из другого города.</p>
           <ul class="card__spec">
-            <li><b>Вы получаете:</b> звонок с видео на телефон, открытие двери из приложения, снимок каждого визита</li>
+            <li data-i="t059"><b>Вы получаете:</b> звонок с видео на телефон, открытие двери из приложения, снимок каждого визита</li>
           </ul>
-          <p class="card__tags"><span>звонок на телефон</span><span>удалённое открытие</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересуют видеодомофоны." target="_blank" rel="noopener">Обсудить в WhatsApp</a>
+          <p class="card__tags" data-i="t060"><span>звонок на телефон</span><span>удалённое открытие</span></p>
+          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересуют видеодомофоны." target="_blank" rel="noopener" data-i="t061">Обсудить в WhatsApp</a>
         </div>
       </article>
 
       <!-- 4. Шлагбаумы -->
       <article class="card card--photo rev" data-rev id="shlagbaumy">
         <figure class="card__media">
-          <img src="assets/parking.webp" alt="Контроль въезда: автоматический шлагбаум на паркинге" width="1000" height="669" loading="lazy" decoding="async">
-          <figcaption class="card__badge">Контроль въезда</figcaption>
+          <img src="assets/parking.webp" alt="Контроль въезда: автоматический шлагбаум на паркинге" data-i-alt="a_gate" width="1000" height="669" loading="lazy" decoding="async">
+          <figcaption class="card__badge" data-i="t062">Контроль въезда</figcaption>
         </figure>
         <div class="card__body">
           <p class="card__num">04</p>
-          <h3 class="card__h">Автоматические шлагбаумы</h3>
-          <p class="card__t">Территория закрыта для чужих машин. Въезд — по правилам, которые задаёте вы.</p>
+          <h3 class="card__h" data-i="t063">Автоматические шлагбаумы</h3>
+          <p class="card__t" data-i="t064">Территория закрыта для чужих машин. Въезд — по правилам, которые задаёте вы.</p>
           <ul class="card__spec">
-            <li><b>Вы получаете:</b> въезд по номеру авто или пульту, список «своих», журнал заездов</li>
+            <li data-i="t065"><b>Вы получаете:</b> въезд по номеру авто или пульту, список «своих», журнал заездов</li>
           </ul>
-          <p class="card__tags"><span>распознавание номеров</span><span>контроль въезда</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует автоматический шлагбаум." target="_blank" rel="noopener">Обсудить в WhatsApp</a>
+          <p class="card__tags" data-i="t066"><span>распознавание номеров</span><span>контроль въезда</span></p>
+          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует автоматический шлагбаум." target="_blank" rel="noopener" data-i="t067">Обсудить в WhatsApp</a>
         </div>
       </article>
 
@@ -323,19 +327,19 @@
         </div>
         <div class="card__body">
           <p class="card__num">05</p>
-          <h3 class="card__h">Пожарная и охранная сигнализация</h3>
-          <p class="card__t">Система замечает дым и вторжение раньше, чем они превратятся в ущерб, — и мгновенно поднимает тревогу.</p>
+          <h3 class="card__h" data-i="t068">Пожарная и охранная сигнализация</h3>
+          <p class="card__t" data-i="t069">Система замечает дым и вторжение раньше, чем они превратятся в ущерб, — и мгновенно поднимает тревогу.</p>
           <ul class="card__spec">
-            <li><b>Вы получаете:</b> датчики дыма и движения, тревогу на телефон, сирену и оповещение ответственных</li>
+            <li data-i="t070"><b>Вы получаете:</b> датчики дыма и движения, тревогу на телефон, сирену и оповещение ответственных</li>
           </ul>
-          <p class="card__tags"><span>реакция в секунды</span><span>оповещение</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует пожарная / охранная сигнализация." target="_blank" rel="noopener">Обсудить в WhatsApp</a>
+          <p class="card__tags" data-i="t071"><span>реакция в секунды</span><span>оповещение</span></p>
+          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует пожарная / охранная сигнализация." target="_blank" rel="noopener" data-i="t072">Обсудить в WhatsApp</a>
         </div>
       </article>
 
     </div>
 
-    <p class="svc__foot rev" data-rev>Не уверены, что именно нужно объекту? Это и показывает
+    <p class="svc__foot rev" data-rev data-i="t073">Не уверены, что именно нужно объекту? Это и показывает
     <a href="#kontakty">бесплатный аудит</a> — выезжаем, смотрим, считаем.</p>
   </div>
 </section>
@@ -344,19 +348,19 @@
 <section class="cases" id="obekty" aria-label="Объекты под защитой">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k">География доверия</p>
-      <h2 class="sechead__h">Эти объекты уже под контролем</h2>
+      <p class="sechead__k" data-i="t074">География доверия</p>
+      <h2 class="sechead__h" data-i="t075">Эти объекты уже под контролем</h2>
     </header>
     <div class="cases__grid">
       <ul class="cases__list rev" data-rev>
-        <li><i>БЦ</i><span>«YA»</span></li>
-        <li><i>ЖК</i><span>«Французский квартал»</span></li>
-        <li><i>ЖК</i><span>Caspian Park</span></li>
-        <li><i>ЖК</i><span>Jaiyk Riverside</span></li>
-        <li><i>ЖК</i><span>«Байтерек»</span></li>
-        <li><i>ЖК</i><span>«Номад»</span></li>
-        <li><i>Клиника</i><span>Damilya</span></li>
-        <li><i>Завод</i><span>пластиковых окон</span></li>
+        <li data-i="t076"><i>БЦ</i><span>«YA»</span></li>
+        <li data-i="t077"><i>ЖК</i><span>«Французский квартал»</span></li>
+        <li data-i="t078"><i>ЖК</i><span>Caspian Park</span></li>
+        <li data-i="t079"><i>ЖК</i><span>Jaiyk Riverside</span></li>
+        <li data-i="t080"><i>ЖК</i><span>«Байтерек»</span></li>
+        <li data-i="t081"><i>ЖК</i><span>«Номад»</span></li>
+        <li data-i="t082"><i>Клиника</i><span>Damilya</span></li>
+        <li data-i="t083"><i>Завод</i><span>пластиковых окон</span></li>
       </ul>
       <div class="cases__photos rev" data-rev aria-hidden="true">
         <figure><img src="assets/case-zhk2.webp" alt="" width="900" height="1200" loading="lazy" decoding="async"></figure>
@@ -365,7 +369,7 @@
         <figure><img src="assets/case-zhk3.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></figure>
       </div>
     </div>
-    <p class="cases__note rev" data-rev>Жилые комплексы, бизнес-центры, клиники, производство — масштаб объекта не имеет значения,
+    <p class="cases__note rev" data-rev data-i="t084">Жилые комплексы, бизнес-центры, клиники, производство — масштаб объекта не имеет значения,
     значение имеет результат: <a href="https://2gis.kz/atyrau/geo/70000001051373711" target="_blank" rel="noopener">отзывы клиентов в 2GIS →</a></p>
   </div>
 </section>
@@ -374,9 +378,9 @@
 <section class="certs" id="partnery" aria-label="Сертификаты и партнёрства">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k">Статусы, которые не покупаются</p>
-      <h2 class="sechead__h">Подтверждённая экспертиза</h2>
-      <p class="sechead__s">Партнёрские статусы производитель выдаёт не за оплату, а за объём внедрений и
+      <p class="sechead__k" data-i="t085">Статусы, которые не покупаются</p>
+      <h2 class="sechead__h" data-i="t086">Подтверждённая экспертиза</h2>
+      <p class="sechead__s" data-i="t087">Партнёрские статусы производитель выдаёт не за оплату, а за объём внедрений и
       сданную аттестацию инженеров. Для вас это значит прямые поставки, заводскую гарантию и
       инженерную поддержку — то, чего нет у «просто установщиков».</p>
     </header>
@@ -389,59 +393,59 @@
         <div class="cert__seal" aria-hidden="true">
           <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="#E8C547" stroke-width="1.5" opacity=".7"/><circle cx="32" cy="32" r="18" fill="none" stroke="#E8C547" stroke-width="1" opacity=".45"/><path d="M32 21l3.1 6.6 7.1 1-5.2 5.2 1.3 7.2-6.3-3.5-6.3 3.5 1.3-7.2-5.2-5.2 7.1-1z" fill="#E8C547" opacity=".9"/></svg>
         </div>
-        <p class="cert__brand">Hikvision</p>
-        <p class="cert__grade">Platinum Partner</p>
-        <p class="cert__t">Высший партнёрский уровень: прямые поставки и приоритетная техподдержка вендора.</p>
+        <p class="cert__brand" data-i="t088">Hikvision</p>
+        <p class="cert__grade" data-i="t089">Platinum Partner</p>
+        <p class="cert__t" data-i="t090">Высший партнёрский уровень: прямые поставки и приоритетная техподдержка вендора.</p>
       </article>
       <article class="cert rev" data-rev>
         <div class="cert__seal" aria-hidden="true">
           <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="#E8C547" stroke-width="1.5" opacity=".7"/><circle cx="32" cy="32" r="18" fill="none" stroke="#E8C547" stroke-width="1" opacity=".45"/><path d="M22 32h20M32 22v20" stroke="#E8C547" stroke-width="2.4" stroke-linecap="round"/></svg>
         </div>
-        <p class="cert__brand">Hikvision</p>
-        <p class="cert__grade">Exclusive Partner Kazakhstan</p>
-        <p class="cert__t">Эксклюзивный статус по Казахстану — отдельная линия поставок под проекты.</p>
+        <p class="cert__brand" data-i="t091">Hikvision</p>
+        <p class="cert__grade" data-i="t092">Exclusive Partner Kazakhstan</p>
+        <p class="cert__t" data-i="t093">Эксклюзивный статус по Казахстану — отдельная линия поставок под проекты.</p>
       </article>
       <article class="cert rev" data-rev>
         <div class="cert__seal" aria-hidden="true">
           <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="#E8C547" stroke-width="1.5" opacity=".7"/><path d="M23 33l6 6 12-13" fill="none" stroke="#E8C547" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <p class="cert__brand">IMOU</p>
-        <p class="cert__grade">Official Dealer RK</p>
-        <p class="cert__t">Официальный дилер: гарантийное и постгарантийное обслуживание на месте.</p>
+        <p class="cert__brand" data-i="t094">IMOU</p>
+        <p class="cert__grade" data-i="t095">Official Dealer RK</p>
+        <p class="cert__t" data-i="t096">Официальный дилер: гарантийное и постгарантийное обслуживание на месте.</p>
       </article>
       <article class="cert rev" data-rev>
         <div class="cert__seal" aria-hidden="true">
           <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="#E8C547" stroke-width="1.5" opacity=".7"/><path d="M32 20l10 6v10c0 7-4.4 11.6-10 14-5.6-2.4-10-7-10-14V26z" fill="none" stroke="#E8C547" stroke-width="2.2"/></svg>
         </div>
-        <p class="cert__brand">Dahua</p>
-        <p class="cert__grade">Партнёрство</p>
-        <p class="cert__t">Второй крупный вендор в линейке — резерв по срокам и совместимости.</p>
+        <p class="cert__brand" data-i="t097">Dahua</p>
+        <p class="cert__grade" data-i="t098">Партнёрство</p>
+        <p class="cert__t" data-i="t099">Второй крупный вендор в линейке — резерв по срокам и совместимости.</p>
       </article>
       <article class="cert rev" data-rev>
         <div class="cert__seal" aria-hidden="true">
           <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="#E8C547" stroke-width="1.5" opacity=".7"/><path d="M32 19v8M32 37v8M19 32h8M37 32h8" stroke="#E8C547" stroke-width="2.4" stroke-linecap="round"/><circle cx="32" cy="32" r="5" fill="#E8C547"/></svg>
         </div>
-        <p class="cert__brand">BOLID</p>
-        <p class="cert__grade">Партнёрство</p>
-        <p class="cert__t">Пожарная и охранная автоматика — оборудование, принимаемое надзорными органами.</p>
+        <p class="cert__brand" data-i="t100">BOLID</p>
+        <p class="cert__grade" data-i="t101">Партнёрство</p>
+        <p class="cert__t" data-i="t102">Пожарная и охранная автоматика — оборудование, принимаемое надзорными органами.</p>
       </article>
       <article class="cert cert--person rev" data-rev>
         <div class="cert__seal" aria-hidden="true">
           <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="#E8C547" stroke-width="1.5" opacity=".7"/><path d="M32 22a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z" fill="none" stroke="#E8C547" stroke-width="2.2"/><path d="M21 45c2-6 6-9 11-9s9 3 11 9" fill="none" stroke="#E8C547" stroke-width="2.2" stroke-linecap="round"/></svg>
         </div>
-        <p class="cert__brand">HCSA</p>
-        <p class="cert__grade">Сертифицированный специалист</p>
-        <p class="cert__t">Личная аттестация директора компании — Ерлана Айчанова.</p>
+        <p class="cert__brand" data-i="t103">HCSA</p>
+        <p class="cert__grade" data-i="t104">Сертифицированный специалист</p>
+        <p class="cert__t" data-i="t105">Личная аттестация директора компании — Ерлана Айчанова.</p>
       </article>
     </div>
 
     <div class="brands rev" data-rev>
-      <p class="brands__k">Работаем с оборудованием</p>
+      <p class="brands__k" data-i="t106">Работаем с оборудованием</p>
       <ul class="brands__list">
-        <li>Hikvision</li><li>Dahua</li><li>IMOU</li><li>UNV</li><li>Ajax</li><li>BOLID</li>
-        <li class="brands__more">и ещё 100+ брендов-партнёров</li>
+        <li data-i="t107">Hikvision</li><li data-i="t108">Dahua</li><li data-i="t109">IMOU</li><li data-i="t110">UNV</li><li data-i="t111">Ajax</li><li data-i="t112">BOLID</li>
+        <li class="brands__more" data-i="t113">и ещё 100+ брендов-партнёров</li>
       </ul>
-      <p class="brands__note">Оборудование подбираем под задачу и бюджет объекта, а не под склад поставщика.
+      <p class="brands__note" data-i="t114">Оборудование подбираем под задачу и бюджет объекта, а не под склад поставщика.
       Оригиналы сертификатов показываем на встрече.</p>
     </div>
   </div>
@@ -451,24 +455,24 @@
 <section class="about" id="o-kompanii" aria-label="О компании BestComKZ">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k">О компании</p>
-      <h2 class="sechead__h">Пятнадцать лет мы отвечаем за чужие объекты</h2>
+      <p class="sechead__k" data-i="t115">О компании</p>
+      <h2 class="sechead__h" data-i="t116">Пятнадцать лет мы отвечаем за чужие объекты</h2>
     </header>
 
     <div class="about__grid">
       <div class="about__lead rev" data-rev>
-        <p>BestComKZ работает в Атырау более пятнадцати лет. За это время под нашей защитой
+        <p data-i="t117">BestComKZ работает в Атырау более пятнадцати лет. За это время под нашей защитой
         оказалось <b>больше 20 000 объектов</b> по Казахстану — от квартиры и небольшого магазина
         до жилых комплексов, бизнес-центров, клиник и производства.</p>
-        <p>Мы не монтажная бригада «по объявлению». Каждый объект начинается с выезда и аудита:
+        <p data-i="t118">Мы не монтажная бригада «по объявлению». Каждый объект начинается с выезда и аудита:
         где вы теряете деньги, где реально уязвимое место, что достаточно закрыть сейчас, а что
         подождёт. Потом — проект, монтаж, настройка, обучение вашей команды и обслуживание.
         Один подрядчик на весь контур: от кабеля в стене до CRM, в которой не теряются заявки.</p>
 
         <figure class="quote">
-          <blockquote>Наша задача — сделать бизнес клиента безопасным, прозрачным и полностью
+          <blockquote data-i="t119">Наша задача — сделать бизнес клиента безопасным, прозрачным и полностью
           контролируемым. Всё остальное — техника, которой мы этого добиваемся.</blockquote>
-          <figcaption>
+          <figcaption data-i="t120">
             <span class="quote__name">Ерлан Айчанов</span>
             <span class="quote__role">директор BestComKZ · сертифицированный специалист HCSA</span>
           </figcaption>
@@ -477,43 +481,43 @@
 
       <ol class="about__facts rev" data-rev>
         <li>
-          <h3>Аудит до сметы, а не после</h3>
-          <p>Сначала выезжаем и находим точки потерь. Смета появляется только тогда, когда понятно,
+          <h3 data-i="t121">Аудит до сметы, а не после</h3>
+          <p data-i="t122">Сначала выезжаем и находим точки потерь. Смета появляется только тогда, когда понятно,
           что именно её оправдывает. Аудит бесплатный.</p>
         </li>
         <li>
-          <h3>Проект, а не «навесить камеры»</h3>
-          <p>Схема объекта, зоны, углы обзора, точки доступа, кабельные трассы. Систему потом можно
+          <h3 data-i="t123">Проект, а не «навесить камеры»</h3>
+          <p data-i="t124">Схема объекта, зоны, углы обзора, точки доступа, кабельные трассы. Систему потом можно
           расширять, а не переделывать с нуля.</p>
         </li>
         <li>
-          <h3>Официальные статусы производителей</h3>
-          <p>Прямые поставки, заводская гарантия и инженерная поддержка вендора — а не «серое»
+          <h3 data-i="t125">Официальные статусы производителей</h3>
+          <p data-i="t126">Прямые поставки, заводская гарантия и инженерная поддержка вендора — а не «серое»
           оборудование без сервиса.</p>
         </li>
         <li>
-          <h3>Гарантия на оборудование и работы</h3>
-          <p>Отвечаем и за железо, и за монтаж. Техническое обслуживание и поддержка — на всех
+          <h3 data-i="t127">Гарантия на оборудование и работы</h3>
+          <p data-i="t128">Отвечаем и за железо, и за монтаж. Техническое обслуживание и поддержка — на всех
           этапах, а не до подписания акта.</p>
         </li>
         <li>
-          <h3>Обучаем вашу команду</h3>
-          <p>Показываем, как смотреть архив, выдавать доступы, снимать тревогу. Система работает
+          <h3 data-i="t129">Обучаем вашу команду</h3>
+          <p data-i="t130">Показываем, как смотреть архив, выдавать доступы, снимать тревогу. Система работает
           без нас — но мы всегда на связи.</p>
         </li>
         <li>
-          <h3>Весь контур в одних руках</h3>
-          <p>Безопасность, ИТ-инфраструктура, CRM и автоматизация. Не нужно сводить между собой
+          <h3 data-i="t131">Весь контур в одних руках</h3>
+          <p data-i="t132">Безопасность, ИТ-инфраструктура, CRM и автоматизация. Не нужно сводить между собой
           трёх подрядчиков, которые кивают друг на друга.</p>
         </li>
       </ol>
     </div>
 
     <div class="about__strip rev" data-rev>
-      <div class="astat"><p class="astat__n">100<b>+</b></p><p class="astat__t">брендов-партнёров в поставке — подбираем под задачу</p></div>
-      <div class="astat"><p class="astat__n">30<b> мин</b></p><p class="astat__t">ответ на заявку в рабочее время</p></div>
-      <div class="astat"><p class="astat__n">0<b> ₸</b></p><p class="astat__t">выезд на объект и аудит рисков</p></div>
-      <div class="astat"><p class="astat__n">1<b> подрядчик</b></p><p class="astat__t">на весь контур: безопасность, ИТ, CRM</p></div>
+      <div class="astat"><p class="astat__n">100<b>+</b></p><p class="astat__t" data-i="t133">брендов-партнёров в поставке — подбираем под задачу</p></div>
+      <div class="astat"><p class="astat__n">30<b> мин</b></p><p class="astat__t" data-i="t134">ответ на заявку в рабочее время</p></div>
+      <div class="astat"><p class="astat__n">0<b> ₸</b></p><p class="astat__t" data-i="t135">выезд на объект и аудит рисков</p></div>
+      <div class="astat"><p class="astat__n">1<b> подрядчик</b></p><p class="astat__t" data-i="t136">на весь контур: безопасность, ИТ, CRM</p></div>
     </div>
   </div>
 </section>
@@ -522,79 +526,80 @@
 <section class="team" id="komanda" aria-label="Команда BestComKZ">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k">Кто работает с вашим объектом</p>
-      <h2 class="sechead__h">Команда, а не безымянный колл-центр</h2>
-      <p class="sechead__s">Вы знаете, кто приедет на аудит, кто настроит систему и кому писать,
+      <p class="sechead__k" data-i="t137">Кто работает с вашим объектом</p>
+      <h2 class="sechead__h" data-i="t138">Команда, а не безымянный колл-центр</h2>
+      <p class="sechead__s" data-i="t139">Вы знаете, кто приедет на аудит, кто настроит систему и кому писать,
       если что-то пошло не так. Это небольшая компания — и в этом её преимущество.</p>
     </header>
 
-    <!-- TBD: фото команды клиент присылает пакетом. Когда придут — внутрь .member__ph
-         вместо .member__mono подставляется <img src="assets/team-*.webp" alt="…">.
+    <!-- Фото 4 сотрудников взяты с действующего сайта bestcom.kz (/media/team/person/),
+         перекадрированы под круглый аватар. У Марселя фото на сервере отдаёт 404,
+         у Айнагуль и Асимы фото нет — там монограммы, разметка та же.
          TBD: подтвердить у Ерлана написание имён (с сайта: Bekzat Qurmangalyiev,
          Marselle Naz, Аиина Кадирбаева) и должности. -->
     <div class="team__grid">
       <article class="member member--lead rev" data-rev>
-        <div class="member__ph"><span class="member__mono" aria-hidden="true">ЕА</span></div>
+        <div class="member__ph"><img src="assets/team-erlan.webp" alt="Ерлан Айчанов — директор BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
         <div class="member__body">
-          <p class="member__role">Директор · HCSA</p>
-          <h3 class="member__name">Ерлан Айчанов</h3>
-          <p class="member__t">Пятнадцать лет в системах безопасности, сертифицированный специалист HCSA.
+          <p class="member__role" data-i="t140">Директор · HCSA</p>
+          <h3 class="member__name" data-i="t141">Ерлан Айчанов</h3>
+          <p class="member__t" data-i="t142">Пятнадцать лет в системах безопасности, сертифицированный специалист HCSA.
           Лично ведёт крупные объекты и защищает проект перед клиентом.</p>
         </div>
       </article>
       <article class="member rev" data-rev>
-        <div class="member__ph"><span class="member__mono" aria-hidden="true">БК</span></div>
+        <div class="member__ph"><img src="assets/team-bekzat.webp" alt="Бекзат Курмангалиев — ИТ-отдел BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
         <div class="member__body">
-          <p class="member__role">ИТ-отдел</p>
-          <h3 class="member__name">Бекзат Курмангалиев</h3>
-          <p class="member__t">Сети, серверы, СКС, резервирование. Отвечает за то, чтобы система
+          <p class="member__role" data-i="t143">ИТ-отдел</p>
+          <h3 class="member__name" data-i="t144">Бекзат Курмангалиев</h3>
+          <p class="member__t" data-i="t145">Сети, серверы, СКС, резервирование. Отвечает за то, чтобы система
           не «отваливалась» в самый нужный момент.</p>
         </div>
       </article>
       <article class="member rev" data-rev>
         <div class="member__ph"><span class="member__mono" aria-hidden="true">МН</span></div>
         <div class="member__body">
-          <p class="member__role">Разработка</p>
-          <h3 class="member__name">Марсель Наз</h3>
-          <p class="member__t">Интеграции, Bitrix24, AI-ассистенты. Сшивает камеры, доступы и CRM
+          <p class="member__role" data-i="t146">Разработка</p>
+          <h3 class="member__name" data-i="t147">Марсель Наз</h3>
+          <p class="member__t" data-i="t148">Интеграции, Bitrix24, AI-ассистенты. Сшивает камеры, доступы и CRM
           в один рабочий процесс.</p>
         </div>
       </article>
       <article class="member rev" data-rev>
-        <div class="member__ph"><span class="member__mono" aria-hidden="true">МТ</span></div>
+        <div class="member__ph"><img src="assets/team-madina.webp" alt="Мадина Турарбекова — менеджер по продажам BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
         <div class="member__body">
-          <p class="member__role">Менеджер по продажам</p>
-          <h3 class="member__name">Мадина Турарбекова</h3>
-          <p class="member__t">Разбирает задачу объекта и подбирает решение под бюджет —
+          <p class="member__role" data-i="t149">Менеджер по продажам</p>
+          <h3 class="member__name" data-i="t150">Мадина Турарбекова</h3>
+          <p class="member__t" data-i="t151">Разбирает задачу объекта и подбирает решение под бюджет —
           без лишнего оборудования «на всякий случай».</p>
         </div>
       </article>
       <a class="member member--wa rev" data-rev href="https://wa.me/77000969967?text=Здравствуйте! Хочу обсудить безопасность объекта." target="_blank" rel="noopener">
         <div class="member__ph"><span class="member__mono" aria-hidden="true">А</span></div>
         <div class="member__body">
-          <p class="member__role">Продажи · безопасность</p>
-          <h3 class="member__name">Айнагуль</h3>
-          <p class="member__t">Видеонаблюдение, домофоны, СКУД. Отвечает в WhatsApp
+          <p class="member__role" data-i="t152">Продажи · безопасность</p>
+          <h3 class="member__name" data-i="t153">Айнагуль</h3>
+          <p class="member__t" data-i="t154">Видеонаблюдение, домофоны, СКУД. Отвечает в WhatsApp
           в течение 30 минут в рабочее время.</p>
-          <p class="member__link">+7 700 096 99 67 — написать</p>
+          <p class="member__link" data-i="t155">+7 700 096 99 67 — написать</p>
         </div>
       </a>
       <a class="member member--wa member--gold rev" data-rev href="https://wa.me/77472508062?text=Здравствуйте! Интересует FREEDO." target="_blank" rel="noopener">
         <div class="member__ph"><span class="member__mono" aria-hidden="true">А</span></div>
         <div class="member__body">
-          <p class="member__role">Продажи · FREEDO</p>
-          <h3 class="member__name">Асима</h3>
-          <p class="member__t">Умные замки FREEDO и камеры. Подскажет, подойдёт ли замок
+          <p class="member__role" data-i="t156">Продажи · FREEDO</p>
+          <h3 class="member__name" data-i="t157">Асима</h3>
+          <p class="member__t" data-i="t158">Умные замки FREEDO и камеры. Подскажет, подойдёт ли замок
           к вашей двери, ещё до выезда.</p>
-          <p class="member__link">+7 747 250 80 62 — написать</p>
+          <p class="member__link" data-i="t159">+7 747 250 80 62 — написать</p>
         </div>
       </a>
       <article class="member rev" data-rev>
-        <div class="member__ph"><span class="member__mono" aria-hidden="true">АК</span></div>
+        <div class="member__ph"><img src="assets/team-aina.webp" alt="Аина Кадирбаева — бухгалтерия BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
         <div class="member__body">
-          <p class="member__role">Бухгалтерия</p>
-          <h3 class="member__name">Аина Кадирбаева</h3>
-          <p class="member__t">Договоры, счета, закрывающие документы. Работа с организациями —
+          <p class="member__role" data-i="t160">Бухгалтерия</p>
+          <h3 class="member__name" data-i="t161">Аина Кадирбаева</h3>
+          <p class="member__t" data-i="t162">Договоры, счета, закрывающие документы. Работа с организациями —
           по всем правилам.</p>
         </div>
       </article>
@@ -606,32 +611,32 @@
 <section class="freedo" id="freedo" aria-label="FREEDO — умные замки">
   <div class="freedo__in">
     <header class="freedo__head rev" data-rev>
-      <p class="freedo__over">BestComKZ представляет собственный бренд</p>
-      <p class="freedo__logo">FREEDO</p>
-      <p class="freedo__slogan">Забудь о ключах. <em>Помни о свободе.</em></p>
+      <p class="freedo__over" data-i="t163">BestComKZ представляет собственный бренд</p>
+      <p class="freedo__logo" data-i="t164">FREEDO</p>
+      <p class="freedo__slogan" data-i="t165">Забудь о ключах. <em>Помни о свободе.</em></p>
     </header>
 
     <div class="freedo__grid">
       <figure class="freedo__ph freedo__ph--a rev" data-rev>
-        <img src="assets/freedo-lock.webp" alt="Умный замок FREEDO: дверь открывается со смартфона" width="1000" height="667" loading="lazy" decoding="async">
-        <figcaption>Дверь открывается со смартфона</figcaption>
+        <img src="assets/freedo-lock.webp" alt="Умный замок FREEDO: дверь открывается со смартфона" data-i-alt="a_lock" width="1000" height="667" loading="lazy" decoding="async">
+        <figcaption data-i="t166">Дверь открывается со смартфона</figcaption>
       </figure>
       <div class="freedo__copy rev" data-rev>
-        <p class="freedo__lead">Умный замок — это не гаджет. Это новый ритуал входа в дом:
+        <p class="freedo__lead" data-i="t167">Умный замок — это не гаджет. Это новый ритуал входа в дом:
         без связки ключей, без «кто взял запасной», без замены замка после потери.</p>
         <ul class="freedo__feats">
-          <li>Доступ со смартфона — ключи больше не теряются</li>
-          <li>Временные коды гостям, арендаторам, персоналу</li>
-          <li>История входов: вы знаете, кто и когда приходил</li>
+          <li data-i="t168">Доступ со смартфона — ключи больше не теряются</li>
+          <li data-i="t169">Временные коды гостям, арендаторам, персоналу</li>
+          <li data-i="t170">История входов: вы знаете, кто и когда приходил</li>
         </ul>
         <div class="freedo__cta">
-          <a class="btn btn--goldfill btn--lg" href="https://wa.me/77472508062?text=Здравствуйте! Интересуют умные замки FREEDO." target="_blank" rel="noopener">Написать Асиме в WhatsApp</a>
-          <a class="freedo__ig" href="https://www.instagram.com/freedo.kz" target="_blank" rel="noopener">@freedo.kz</a>
+          <a class="btn btn--goldfill btn--lg" href="https://wa.me/77472508062?text=Здравствуйте! Интересуют умные замки FREEDO." target="_blank" rel="noopener" data-i="t171">Написать Асиме в WhatsApp</a>
+          <a class="freedo__ig" href="https://www.instagram.com/freedo.kz" target="_blank" rel="noopener" data-i="t172">@freedo.kz</a>
         </div>
       </div>
       <figure class="freedo__ph freedo__ph--b rev" data-rev>
-        <img src="assets/freedo-house.webp" alt="Дом со свободным доступом без ключей" width="1200" height="800" loading="lazy" decoding="async">
-        <figcaption>Свобода начинается с двери</figcaption>
+        <img src="assets/freedo-house.webp" alt="Дом со свободным доступом без ключей" data-i-alt="a_house" width="1200" height="800" loading="lazy" decoding="async">
+        <figcaption data-i="t173">Свобода начинается с двери</figcaption>
       </figure>
     </div>
   </div>
@@ -641,36 +646,36 @@
 <section class="digital" aria-label="Автоматизация бизнеса">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k">Контур 02 — цифровая защита от потерь</p>
-      <h2 class="sechead__h">Потери бывают не только на складе.<br>Заявки тоже воруют — хаос и невнимательность.</h2>
+      <p class="sechead__k" data-i="t174">Контур 02 — цифровая защита от потерь</p>
+      <h2 class="sechead__h" data-i="t175">Потери бывают не только на складе.<br>Заявки тоже воруют — хаос и невнимательность.</h2>
     </header>
 
     <div class="digital__grid">
       <article class="card card--photo rev" data-rev id="bitrix24">
         <figure class="card__media">
-          <img src="assets/crm-dash.webp" alt="Bitrix24 CRM: контроль заявок и сделок" width="1000" height="667" loading="lazy" decoding="async">
+          <img src="assets/crm-dash.webp" alt="Bitrix24 CRM: контроль заявок и сделок" data-i-alt="a_crm" width="1000" height="667" loading="lazy" decoding="async">
         </figure>
         <div class="card__body">
           <p class="card__num">06</p>
-          <h3 class="card__h">Bitrix24 CRM + автоматизация</h3>
-          <p class="card__t">Заявки не теряются в переписках и блокнотах: каждая доходит до сделки,
+          <h3 class="card__h" data-i="t176">Bitrix24 CRM + автоматизация</h3>
+          <p class="card__t" data-i="t177">Заявки не теряются в переписках и блокнотах: каждая доходит до сделки,
           каждый этап — под контролем руководителя.</p>
-          <p class="card__tags"><span>внедрение под ключ</span><span>обучение команды</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует внедрение Bitrix24." target="_blank" rel="noopener">Обсудить в WhatsApp</a>
+          <p class="card__tags" data-i="t178"><span>внедрение под ключ</span><span>обучение команды</span></p>
+          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует внедрение Bitrix24." target="_blank" rel="noopener" data-i="t179">Обсудить в WhatsApp</a>
         </div>
       </article>
 
       <article class="card card--photo rev" data-rev id="ai-assistenty">
         <figure class="card__media">
-          <img src="assets/ai-chat.webp" alt="AI-ассистент отвечает клиентам в WhatsApp и Instagram" width="1000" height="667" loading="lazy" decoding="async">
+          <img src="assets/ai-chat.webp" alt="AI-ассистент отвечает клиентам в WhatsApp и Instagram" data-i-alt="a_ai" width="1000" height="667" loading="lazy" decoding="async">
         </figure>
         <div class="card__body">
           <p class="card__num">07</p>
-          <h3 class="card__h">AI-ассистенты WhatsApp / Instagram</h3>
-          <p class="card__t">Отвечают клиентам за секунды — ночью, в выходные, без отпусков.
+          <h3 class="card__h" data-i="t180">AI-ассистенты WhatsApp / Instagram</h3>
+          <p class="card__t" data-i="t181">Отвечают клиентам за секунды — ночью, в выходные, без отпусков.
           Ни одно обращение не остаётся без ответа.</p>
-          <p class="card__tags"><span>автоответы 24/7</span><span>обработка лидов</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересуют AI-ассистенты для WhatsApp/Instagram." target="_blank" rel="noopener">Обсудить в WhatsApp</a>
+          <p class="card__tags" data-i="t182"><span>автоответы 24/7</span><span>обработка лидов</span></p>
+          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересуют AI-ассистенты для WhatsApp/Instagram." target="_blank" rel="noopener" data-i="t183">Обсудить в WhatsApp</a>
         </div>
       </article>
     </div>
@@ -679,14 +684,14 @@
          Оставлены компактной строкой компетенций — подтвердить, выносить ли их
          в полноценные блоки лэндинга. -->
     <div class="extra rev" data-rev>
-      <p class="extra__k">Смежные компетенции — закрываем тем же подрядчиком</p>
+      <p class="extra__k" data-i="t184">Смежные компетенции — закрываем тем же подрядчиком</p>
       <ul class="extra__list">
-        <li><b>ИТ-инфраструктура и СКС</b><span>монтаж сетей, серверная, кабельные трассы</span></li>
-        <li><b>Резервирование данных</b><span>чтобы архив и база не исчезли вместе с диском</span></li>
-        <li><b>Интеграция с 1С</b><span>продажи и склад в одной картине с CRM</span></li>
-        <li><b>Корпоративная телефония</b><span>звонки записываются и привязаны к сделке</span></li>
-        <li><b>Воронки продаж</b><span>видно, на каком этапе теряются заявки</span></li>
-        <li><b>Учёт рабочего времени</b><span>WorkPace: простои и переработки — цифрами</span></li>
+        <li data-i="t185"><b>ИТ-инфраструктура и СКС</b><span>монтаж сетей, серверная, кабельные трассы</span></li>
+        <li data-i="t186"><b>Резервирование данных</b><span>чтобы архив и база не исчезли вместе с диском</span></li>
+        <li data-i="t187"><b>Интеграция с 1С</b><span>продажи и склад в одной картине с CRM</span></li>
+        <li data-i="t188"><b>Корпоративная телефония</b><span>звонки записываются и привязаны к сделке</span></li>
+        <li data-i="t189"><b>Воронки продаж</b><span>видно, на каком этапе теряются заявки</span></li>
+        <li data-i="t190"><b>Учёт рабочего времени</b><span>WorkPace: простои и переработки — цифрами</span></li>
       </ul>
     </div>
   </div>
@@ -696,24 +701,24 @@
 <section class="proc" aria-label="Как мы работаем">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k">Как это происходит</p>
-      <h2 class="sechead__h">Три шага до управляемого объекта</h2>
+      <p class="sechead__k" data-i="t191">Как это происходит</p>
+      <h2 class="sechead__h" data-i="t192">Три шага до управляемого объекта</h2>
     </header>
     <ol class="proc__steps">
       <li class="rev" data-rev>
         <p class="proc__n">01</p>
-        <h3>Диагностика</h3>
-        <p>Бесплатный аудит: выезжаем на объект, находим уязвимости и точки потерь.</p>
+        <h3 data-i="t193">Диагностика</h3>
+        <p data-i="t194">Бесплатный аудит: выезжаем на объект, находим уязвимости и точки потерь.</p>
       </li>
       <li class="rev" data-rev>
         <p class="proc__n">02</p>
-        <h3>Интеграция</h3>
-        <p>Проектируем и запускаем систему под ключ, обучаем вашу команду.</p>
+        <h3 data-i="t195">Интеграция</h3>
+        <p data-i="t196">Проектируем и запускаем систему под ключ, обучаем вашу команду.</p>
       </li>
       <li class="rev" data-rev>
         <p class="proc__n">03</p>
-        <h3>Результат</h3>
-        <p>Объект под контролем. Мы остаёмся на связи и поддерживаем систему.</p>
+        <h3 data-i="t197">Результат</h3>
+        <p data-i="t198">Объект под контролем. Мы остаёмся на связи и поддерживаем систему.</p>
       </li>
     </ol>
   </div>
@@ -723,64 +728,64 @@
 <section class="faq" id="faq" aria-label="Частые вопросы">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k">Прежде чем звонить</p>
-      <h2 class="sechead__h">Вопросы, которые нам задают чаще всего</h2>
+      <p class="sechead__k" data-i="t199">Прежде чем звонить</p>
+      <h2 class="sechead__h" data-i="t200">Вопросы, которые нам задают чаще всего</h2>
     </header>
 
     <div class="faq__grid">
       <details class="faq__i rev" data-rev>
-        <summary>Сколько стоит система для моего объекта?</summary>
-        <div class="faq__a"><p>Честный ответ — до выезда этого не знает никто. Цена зависит от площади,
+        <summary data-i="t201">Сколько стоит система для моего объекта?</summary>
+        <div class="faq__a"><p data-i="t202">Честный ответ — до выезда этого не знает никто. Цена зависит от площади,
         количества точек, того, есть ли уже кабельные трассы, и от того, что именно нужно закрыть.
         Поэтому мы начинаем с бесплатного аудита: смотрим объект, показываем уязвимые места и
         считаем смету по фактическим точкам, а не «на глаз по телефону».</p></div>
       </details>
 
       <details class="faq__i rev" data-rev>
-        <summary>Как быстро вы отвечаете?</summary>
-        <div class="faq__a"><p>В течение 30 минут в рабочее время: Пн–Пт 9:30–18:00, Сб 10:00–18:00.
+        <summary data-i="t203">Как быстро вы отвечаете?</summary>
+        <div class="faq__a"><p data-i="t204">В течение 30 минут в рабочее время: Пн–Пт 9:30–18:00, Сб 10:00–18:00.
         Самый быстрый канал — WhatsApp: напишите тип объекта и задачу, и менеджер сразу подскажет,
         нужен ли выезд.</p></div>
       </details>
 
       <details class="faq__i rev" data-rev>
-        <summary>Даёте ли вы гарантию?</summary>
-        <div class="faq__a"><p>Да — и на оборудование, и на монтажные работы. Мы официальный партнёр
+        <summary data-i="t205">Даёте ли вы гарантию?</summary>
+        <div class="faq__a"><p data-i="t206">Да — и на оборудование, и на монтажные работы. Мы официальный партнёр
         производителей, поэтому гарантия заводская, а не «от установщика». После сдачи объекта
         остаётся техническое обслуживание и поддержка — систему не бросают после подписания акта.</p></div>
       </details>
 
       <details class="faq__i rev" data-rev>
-        <summary>Можно ли смотреть камеры с телефона?</summary>
-        <div class="faq__a"><p>Да, это базовый сценарий: приложение на смартфоне, просмотр в реальном
+        <summary data-i="t207">Можно ли смотреть камеры с телефона?</summary>
+        <div class="faq__a"><p data-i="t208">Да, это базовый сценарий: приложение на смартфоне, просмотр в реальном
         времени и доступ к архиву из любой точки мира. Настраиваем и показываем, как этим пользоваться,
         вам и вашим сотрудникам.</p></div>
       </details>
 
       <details class="faq__i rev" data-rev>
-        <summary>У меня уже стоят камеры. Вы работаете с чужой системой?</summary>
-        <div class="faq__a"><p>Да. Часто не нужно менять всё: достаточно добавить недостающие точки,
+        <summary data-i="t209">У меня уже стоят камеры. Вы работаете с чужой системой?</summary>
+        <div class="faq__a"><p data-i="t210">Да. Часто не нужно менять всё: достаточно добавить недостающие точки,
         заменить регистратор или настроить удалённый доступ, который так и не заработал.
         Аудит как раз и показывает, что можно оставить, а что действительно тянет объект вниз.</p></div>
       </details>
 
       <details class="faq__i rev" data-rev>
-        <summary>Вы работаете только в Атырау?</summary>
-        <div class="faq__a"><p>База и офис — в Атырау, здесь мы выезжаем на объект быстрее всего.
+        <summary data-i="t211">Вы работаете только в Атырау?</summary>
+        <div class="faq__a"><p data-i="t212">База и офис — в Атырау, здесь мы выезжаем на объект быстрее всего.
         Но за 15 лет объекты появились по всему Казахстану: их больше 20 000. По другим городам —
         обсуждаем проект отдельно.</p></div>
       </details>
 
       <details class="faq__i rev" data-rev>
-        <summary>Работаете с организациями? Нужны документы.</summary>
-        <div class="faq__a"><p>Да, работаем и с частными клиентами, и с юридическими лицами:
+        <summary data-i="t213">Работаете с организациями? Нужны документы.</summary>
+        <div class="faq__a"><p data-i="t214">Да, работаем и с частными клиентами, и с юридическими лицами:
         договор, счёт на оплату, закрывающие документы. Бухгалтерия у нас своя — с документами
         проблем не будет.</p></div>
       </details>
 
       <details class="faq__i rev" data-rev>
-        <summary>Чем FREEDO отличается от обычного замка?</summary>
-        <div class="faq__a"><p>FREEDO — наш собственный бренд умных замков. Дверь открывается со
+        <summary data-i="t215">Чем FREEDO отличается от обычного замка?</summary>
+        <div class="faq__a"><p data-i="t216">FREEDO — наш собственный бренд умных замков. Дверь открывается со
         смартфона, гостю или арендатору выдаётся временный код, а история входов остаётся в приложении.
         Потерянный ключ перестаёт быть проблемой: код отзывается за секунду, менять личинку не нужно.
         <a href="#freedo">Подробнее о FREEDO →</a></p></div>
@@ -793,16 +798,16 @@
 <section class="contact" id="kontakty" aria-label="Контакты">
   <div class="wrap contact__grid">
     <div class="contact__info rev" data-rev>
-      <h2 class="contact__h">Начните с бесплатного аудита безопасности</h2>
-      <p class="contact__s">Расскажите про объект — ответим в течение 30 минут в рабочее время.</p>
+      <h2 class="contact__h" data-i="t217">Начните с бесплатного аудита безопасности</h2>
+      <p class="contact__s" data-i="t218">Расскажите про объект — ответим в течение 30 минут в рабочее время.</p>
 
       <div class="contact__people">
-        <a class="person" href="https://wa.me/77000969967?text=Здравствуйте! Хочу обсудить безопасность объекта." target="_blank" rel="noopener">
+        <a class="person" href="https://wa.me/77000969967?text=Здравствуйте! Хочу обсудить безопасность объекта." target="_blank" rel="noopener" data-i="t219">
           <span class="person__role">Видеонаблюдение · домофоны · системы безопасности</span>
           <span class="person__name">Айнагуль — WhatsApp</span>
           <span class="person__phone">+7 700 096 99 67</span>
         </a>
-        <a class="person person--freedo" href="https://wa.me/77472508062?text=Здравствуйте! Интересует FREEDO." target="_blank" rel="noopener">
+        <a class="person person--freedo" href="https://wa.me/77472508062?text=Здравствуйте! Интересует FREEDO." target="_blank" rel="noopener" data-i="t220">
           <span class="person__role">FREEDO · камеры</span>
           <span class="person__name">Асима — WhatsApp</span>
           <span class="person__phone">+7 747 250 80 62</span>
@@ -810,41 +815,41 @@
       </div>
 
       <ul class="contact__meta">
-        <li><b>Instagram:</b> <a href="https://www.instagram.com/atyrau_bestcomkz" target="_blank" rel="noopener">@atyrau_bestcomkz</a> · <a href="https://www.instagram.com/freedo.kz" target="_blank" rel="noopener">@freedo.kz</a></li>
-        <li><b>Email:</b> <a href="mailto:info@bestcom.kz">info@bestcom.kz</a></li>
-        <li><b>График:</b> Пн–Пт 9:30–18:00 · Сб 10:00–18:00 · Вс — выходной</li>
+        <li data-i="t221"><b>Instagram:</b> <a href="https://www.instagram.com/atyrau_bestcomkz" target="_blank" rel="noopener">@atyrau_bestcomkz</a> · <a href="https://www.instagram.com/freedo.kz" target="_blank" rel="noopener">@freedo.kz</a></li>
+        <li data-i="t222"><b>Email:</b> <a href="mailto:info@bestcom.kz">info@bestcom.kz</a></li>
+        <li data-i="t223"><b>График:</b> Пн–Пт 9:30–18:00 · Сб 10:00–18:00 · Вс — выходной</li>
         <!-- TBD: адрес не подтверждён клиентом, ждём финальный адрес шоурума -->
-        <li><b>Адрес:</b> г. Атырау, ул. Темірханова 12А-1</li>
-        <li><b>Отзывы:</b> <a href="https://2gis.kz/atyrau/geo/70000001051373711" target="_blank" rel="noopener">профиль в 2GIS</a></li>
+        <li data-i="t224"><b>Адрес:</b> г. Атырау, ул. Темірханова 12А-1</li>
+        <li data-i="t225"><b>Отзывы:</b> <a href="https://2gis.kz/atyrau/geo/70000001051373711" target="_blank" rel="noopener">профиль в 2GIS</a></li>
       </ul>
     </div>
 
     <form class="contact__form rev" data-rev id="auditForm" novalidate>
-      <p class="form__k">Заявка на аудит</p>
+      <p class="form__k" data-i="t226">Заявка на аудит</p>
       <label class="field">
-        <span>Ваше имя</span>
-        <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться" required>
+        <span data-i="t227">Ваше имя</span>
+        <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться" data-i-ph="p_name" required>
       </label>
       <label class="field">
-        <span>Телефон</span>
-        <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 ___ ___ __ __" required>
+        <span data-i="t228">Телефон</span>
+        <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 ___ ___ __ __" data-i-ph="p_phone" required>
       </label>
       <label class="field">
-        <span>Объект и задача</span>
-        <textarea name="task" rows="3" placeholder="Например: магазин, нужен контроль кассовой зоны"></textarea>
+        <span data-i="t229">Объект и задача</span>
+        <textarea name="task" rows="3" placeholder="Например: магазин, нужен контроль кассовой зоны" data-i-ph="p_task"></textarea>
       </label>
-      <button class="btn btn--gold btn--lg form__submit" type="submit">Получить бесплатный аудит</button>
-      <p class="form__note">Нажимая кнопку, вы откроете чат WhatsApp с готовым сообщением — ничего никуда не отправляется без вас.</p>
+      <button class="btn btn--gold btn--lg form__submit" type="submit" data-i="t230">Получить бесплатный аудит</button>
+      <p class="form__note" data-i="t231">Нажимая кнопку, вы откроете чат WhatsApp с готовым сообщением — ничего никуда не отправляется без вас.</p>
       <div class="form__done" id="formDone" hidden>
-        <p><b>Спасибо!</b> Сообщение сформировано — мы уже открываем WhatsApp.
+        <p data-i="t232"><b>Спасибо!</b> Сообщение сформировано — мы уже открываем WhatsApp.
         Если чат не открылся, напишите нам напрямую: +7 700 096 99 67.</p>
       </div>
     </form>
 
     <ol class="contact__next rev" data-rev>
-      <li><b>Вы пишете</b><span>в WhatsApp или через форму — коротко про объект и задачу</span></li>
-      <li><b>Мы отвечаем за 30 минут</b><span>в рабочее время, задаём пару уточняющих вопросов</span></li>
-      <li><b>Выезжаем на аудит</b><span>бесплатно: показываем уязвимые места и считаем смету по фактическим точкам</span></li>
+      <li data-i="t233"><b>Вы пишете</b><span>в WhatsApp или через форму — коротко про объект и задачу</span></li>
+      <li data-i="t234"><b>Мы отвечаем за 30 минут</b><span>в рабочее время, задаём пару уточняющих вопросов</span></li>
+      <li data-i="t235"><b>Выезжаем на аудит</b><span>бесплатно: показываем уязвимые места и считаем смету по фактическим точкам</span></li>
     </ol>
   </div>
 </section>
@@ -853,24 +858,24 @@
 
 <footer class="foot">
   <div class="wrap foot__in">
-    <p class="foot__brand">BEST<b>COM</b><i>KZ</i> <span>— контроль и защита от потерь</span></p>
+    <p class="foot__brand">BEST<b>COM</b><i>KZ</i> <span data-i="t251">— контроль и защита от потерь</span></p>
     <nav class="foot__nav" aria-label="Навигация в подвале">
-      <a href="#videonablyudenie">Видеонаблюдение</a>
-      <a href="#skud-face-id">СКУД</a>
-      <a href="#videodomofony">Домофоны</a>
-      <a href="#shlagbaumy">Шлагбаумы</a>
-      <a href="#signalizaciya">Сигнализация</a>
-      <a href="#freedo">FREEDO</a>
-      <a href="#bitrix24">Bitrix24</a>
-      <a href="#ai-assistenty">AI-ассистенты</a>
-      <a href="#obekty">Объекты</a>
-      <a href="#partnery">Партнёрства</a>
-      <a href="#o-kompanii">О компании</a>
-      <a href="#komanda">Команда</a>
-      <a href="#faq">Вопросы</a>
-      <a href="#kontakty">Контакты</a>
+      <a href="#videonablyudenie" data-i="t236">Видеонаблюдение</a>
+      <a href="#skud-face-id" data-i="t237">СКУД</a>
+      <a href="#videodomofony" data-i="t238">Домофоны</a>
+      <a href="#shlagbaumy" data-i="t239">Шлагбаумы</a>
+      <a href="#signalizaciya" data-i="t240">Сигнализация</a>
+      <a href="#freedo" data-i="t241">FREEDO</a>
+      <a href="#bitrix24" data-i="t242">Bitrix24</a>
+      <a href="#ai-assistenty" data-i="t243">AI-ассистенты</a>
+      <a href="#obekty" data-i="t244">Объекты</a>
+      <a href="#partnery" data-i="t245">Партнёрства</a>
+      <a href="#o-kompanii" data-i="t246">О компании</a>
+      <a href="#komanda" data-i="t247">Команда</a>
+      <a href="#faq" data-i="t248">Вопросы</a>
+      <a href="#kontakty" data-i="t249">Контакты</a>
     </nav>
-    <p class="foot__copy">© <span id="year">2026</span> BestComKZ · Атырау, Казахстан</p>
+    <p class="foot__copy">© <span id="year">2026</span> <span data-i="t250">BestComKZ · Атырау, Казахстан</span></p>
   </div>
 </footer>
 

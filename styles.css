@@ -105,6 +105,23 @@ body::after{
 .hdr__beam{height:2px;background:transparent}
 .hdr__beam i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sky),var(--gold))}
 
+/* переключатель языка */
+.lang{
+  display:inline-flex;margin-left:auto;flex:none;
+  border:1px solid var(--line);border-radius:99px;padding:3px;
+  background:rgba(7,24,41,.55);backdrop-filter:blur(6px);
+}
+.lang__btn{
+  font-family:var(--font-t);font-size:13px;font-weight:700;letter-spacing:.04em;
+  color:var(--mut);background:none;border:0;border-radius:99px;
+  padding:.38em .82em;cursor:pointer;transition:color .2s ease,background .2s ease;
+}
+.lang__btn:hover{color:var(--white)}
+.lang__btn.is-active{background:var(--gold);color:var(--navy)}
+.lang__btn:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+@media(min-width:960px){.lang{margin-left:14px}}
+@media(max-width:959px){.burger{margin-left:10px}}
+
 /* мобильное меню */
 .nav.mopen{
   display:flex;flex-direction:column;gap:4px;
@@ -508,7 +525,8 @@ body::after{
   border:1px solid rgba(232,197,71,.45);
   background:radial-gradient(circle at 50% 20%,rgba(61,185,240,.22),rgba(7,24,41,.9));
 }
-.member__ph img{width:100%;height:100%;object-fit:cover}
+.member__ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03)}
+.member:hover .member__ph img{filter:saturate(1) contrast(1.05)}
 .member__mono{
   font-family:var(--font-d);font-weight:700;font-size:22px;letter-spacing:.06em;color:var(--gold);
 }
