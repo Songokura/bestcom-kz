@@ -709,17 +709,65 @@ body::after{
 .contact__h{font-family:var(--font-d);font-size:clamp(27px,4vw,40px);line-height:1.18;max-width:18ch}
 .contact__s{margin-top:14px;color:var(--mut);font-size:16.5px}
 .contact__people{display:grid;gap:12px;margin-top:30px}
-.person{
-  display:flex;flex-direction:column;gap:3px;
-  border:1px solid var(--line);border-radius:12px;padding:18px 20px;
-  background:rgba(16,44,71,.35);transition:border-color .25s ease,transform .25s ease;
+
+/* раскрывающиеся контакты — каждое раскрытие пишется в аналитику */
+.cbox{
+  border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  background:rgba(16,44,71,.35);
+  transition:border-color .25s ease,background .25s ease;
 }
-.person:hover{border-color:var(--sky);transform:translateY(-3px)}
-.person--freedo:hover{border-color:var(--gold)}
-.person__role{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.person__name{font-family:var(--font-d);font-size:19px;font-weight:700;color:var(--white);margin-top:4px}
-.person--freedo .person__name{color:var(--gold)}
-.person__phone{font-size:16px;color:var(--sky);font-weight:700}
+.cbox:hover{border-color:var(--sky)}
+.cbox[open]{border-color:rgba(61,185,240,.6);background:rgba(16,44,71,.5)}
+.cbox--freedo:hover,.cbox--freedo[open]{border-color:var(--gold)}
+.cbox summary{
+  list-style:none;cursor:pointer;position:relative;
+  display:flex;flex-direction:column;gap:3px;
+  padding:18px 130px 18px 20px;
+}
+.cbox summary::-webkit-details-marker{display:none}
+.cbox summary:focus-visible{outline:2px solid var(--sky);outline-offset:-3px}
+.cbox__role{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.cbox__name{font-family:var(--font-d);font-size:20px;font-weight:700;color:var(--white);margin-top:4px}
+.cbox--freedo .cbox__name{color:var(--gold)}
+/* «Показать контакты» — видимая цель клика, она же событие конверсии */
+.cbox__hint{
+  position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  display:inline-flex;align-items:center;gap:.45em;
+  font-size:13.5px;font-weight:700;color:var(--sky);
+  border:1px solid rgba(61,185,240,.4);border-radius:99px;padding:.4em .85em;
+  white-space:nowrap;transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.cbox__hint::after{content:"+";font-size:15px;line-height:1;transition:transform .3s ease}
+.cbox summary:hover .cbox__hint{background:rgba(61,185,240,.12);color:var(--white)}
+.cbox--freedo .cbox__hint{color:var(--gold);border-color:rgba(232,197,71,.45)}
+.cbox--freedo summary:hover .cbox__hint{background:rgba(232,197,71,.12)}
+.cbox[open] .cbox__hint::after{transform:rotate(45deg)}
+.cbox__hint--hide{display:none}
+.cbox[open] .cbox__hint{display:none}
+.cbox[open] .cbox__hint--hide{display:inline-flex}
+.cbox__body{
+  padding:0 20px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;
+  animation:cboxIn .3s ease;
+}
+@keyframes cboxIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.cbox__tel{
+  font-family:var(--font-d);font-size:23px;font-weight:700;color:var(--sky);
+  letter-spacing:.01em;border-bottom:1px solid rgba(61,185,240,.35);
+}
+.cbox__tel:hover{color:var(--white);border-color:var(--white)}
+.cbox--freedo .cbox__tel{color:var(--gold);border-color:rgba(232,197,71,.4)}
+.cbox__wa{flex:none}
+.cbox__body--links{gap:10px 22px}
+.cbox__body--links a{font-size:16.5px;font-weight:700;border-bottom:1px solid rgba(61,185,240,.3)}
+.cbox__body--links a:hover{color:var(--white);border-color:var(--white)}
+@media(max-width:560px){
+  .cbox summary{padding:16px 18px 14px}
+  .cbox__hint{position:static;transform:none;margin-top:10px;width:fit-content}
+  .cbox__body{padding:0 18px 18px}
+  .cbox__tel{font-size:21px}
+  .cbox__wa{width:100%;justify-content:center}
+}
+
 .contact__meta{margin-top:26px;display:grid;gap:9px;font-size:15.5px;color:#c3d2e0}
 .contact__meta b{color:var(--white)}
 

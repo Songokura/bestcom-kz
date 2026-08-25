@@ -107,7 +107,7 @@
     t080: '<i>ТҮК</i><span>«Байтерек»</span>',
     t081: '<i>ТҮК</i><span>«Номад»</span>',
     t082: '<i>Клиника</i><span>Damilya</span>',
-    t083: '<i>Зауыт</i><span>пластик терезелер</span>',
+    t083: '<i>Өндіріс</i><span>Пластик терезелер зауыты</span>',
     t084: 'Тұрғын үй кешендері, бизнес-орталықтар, клиникалар, өндіріс — нысанның ауқымы емес, нәтиже маңызды: <a href="https://2gis.kz/atyrau/geo/70000001051373711" target="_blank" rel="noopener">2GIS-тегі клиент пікірлері →</a>',
 
     /* сертификаты */
@@ -240,11 +240,18 @@
     /* контакты */
     t217: 'Тегін қауіпсіздік аудитінен бастаңыз',
     t218: 'Нысан туралы айтыңыз — жұмыс уақытында 30 минут ішінде жауап береміз.',
-    t219: '<span class="person__role">Бейнебақылау · домофондар · қауіпсіздік жүйелері</span>\n          <span class="person__name">Айнагүл — WhatsApp</span>\n          <span class="person__phone">+7 700 096 99 67</span>',
-    t220: '<span class="person__role">FREEDO · камералар</span>\n          <span class="person__name">Әсима — WhatsApp</span>\n          <span class="person__phone">+7 747 250 80 62</span>',
     t223: '<b>Жұмыс кестесі:</b> Дс–Жм 9:30–18:00 · Сб 10:00–18:00 · Жк — демалыс',
     t224: '<b>Мекенжай:</b> Атырау қ., Темірханов к-сі 12А-1',
     t225: '<b>Пікірлер:</b> <a href="https://2gis.kz/atyrau/geo/70000001051373711" target="_blank" rel="noopener">2GIS профилі</a>',
+    c1_role: 'Бейнебақылау · домофондар · кіру бақылауы',
+    c1_name: 'Айнагүл',
+    c2_role: 'FREEDO · камералар',
+    c2_name: 'Әсима',
+    c3_role: 'Әлеуметтік желілер және пошта',
+    c3_name: 'Instagram · Email',
+    c_show: 'Байланысты көрсету',
+    c_hide: 'Жию',
+    c_wa: 'WhatsApp-та жазу',
     t226: 'Аудитке өтінім',
     t227: 'Атыңыз', t228: 'Телефон', t229: 'Нысан және міндет',
     t230: 'Тегін аудит алу',
@@ -452,18 +459,58 @@
       'Телефон: ' + phone +
       (task ? '\nОбъект/задача: ' + task : '');
     var url = 'https://wa.me/' + WA_MAIN + '?text=' + encodeURIComponent(msg);
+    trackEvent('audit_form_submit', { channel: 'whatsapp', contact: 'ainagul', lang: currentLang });
     if (done) done.hidden = false;
     window.open(url, '_blank', 'noopener');
   }
   if (form) form.addEventListener('submit', handleAuditFormSubmit);
 
-  /* ---------- делегированные клики tel: / WhatsApp ----------
-     Чистый обработчик: сюда позже добавятся gtag-конверсии. */
+  /* ---------- аналитика: единая точка отправки событий ----------
+     Пишем и в dataLayer (GTM), и в gtag (Google Ads / GA4), если тег уже стоит.
+     Пока тега нет — события копятся в dataLayer и ничего не ломают.
+     События: contact_reveal (раскрыли вкладку с контактом),
+              contact_click (перешли по телефону / WhatsApp / Instagram / почте),
+              audit_form_submit (отправили форму заявки). */
+  function trackEvent(name, params) {
+    var p = { event: name };
+    if (params) { for (var k in params) { if (params.hasOwnProperty(k)) p[k] = params[k]; } }
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(p);
+    } catch (e) {}
+    if (typeof window.gtag === 'function') {
+      try { window.gtag('event', name, params || {}); } catch (e) {}
+    }
+  }
+
+  /* ---------- раскрывающиеся контакты ----------
+     Раскрытие вкладки = «получение контакта», основная цель конверсии. */
+  document.querySelectorAll('.cbox').forEach(function (box) {
+    box.addEventListener('toggle', function () {
+      if (box.open) {
+        trackEvent('contact_reveal', { contact: box.getAttribute('data-contact') || '' });
+      }
+    });
+  });
+
+  /* ---------- делегированные клики по контактам ---------- */
   function handleContactClick(e) {
-    var a = e.target.closest('a[href^="tel:"], a[href*="wa.me"]');
+    var a = e.target.closest('a[data-ch], a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]');
     if (!a) return;
-    /* точка подключения аналитики:
-       a.href содержит канал (tel / wa.me), контекст — ближайшая секция с id */
+    var ch = a.getAttribute('data-ch');
+    if (!ch) {
+      var href = a.getAttribute('href') || '';
+      ch = href.indexOf('wa.me') > -1 ? 'whatsapp'
+         : href.indexOf('tel:') === 0 ? 'tel'
+         : href.indexOf('mailto:') === 0 ? 'email' : 'other';
+    }
+    var sec = a.closest('section');
+    trackEvent('contact_click', {
+      channel: ch,
+      contact: a.getAttribute('data-contact') || '',
+      section: sec ? (sec.id || (sec.className || '').split(' ')[0]) : '',
+      lang: currentLang
+    });
   }
   document.addEventListener('click', handleContactClick);
 

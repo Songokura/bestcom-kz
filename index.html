@@ -360,7 +360,7 @@
         <li data-i="t080"><i>ЖК</i><span>«Байтерек»</span></li>
         <li data-i="t081"><i>ЖК</i><span>«Номад»</span></li>
         <li data-i="t082"><i>Клиника</i><span>Damilya</span></li>
-        <li data-i="t083"><i>Завод</i><span>пластиковых окон</span></li>
+        <li data-i="t083"><i>Производство</i><span>Завод пластиковых окон</span></li>
       </ul>
       <div class="cases__photos rev" data-rev aria-hidden="true">
         <figure><img src="assets/case-zhk2.webp" alt="" width="900" height="1200" loading="lazy" decoding="async"></figure>
@@ -801,26 +801,58 @@
       <h2 class="contact__h" data-i="t217">Начните с бесплатного аудита безопасности</h2>
       <p class="contact__s" data-i="t218">Расскажите про объект — ответим в течение 30 минут в рабочее время.</p>
 
+      <!-- Контакты раскрываются по клику: каждое раскрытие и каждый переход
+           отдаёт событие в dataLayer/gtag (см. script.js → trackEvent).
+           Это и есть точки конверсии «получение контакта» для Google Ads. -->
       <div class="contact__people">
-        <a class="person" href="https://wa.me/77000969967?text=Здравствуйте! Хочу обсудить безопасность объекта." target="_blank" rel="noopener" data-i="t219">
-          <span class="person__role">Видеонаблюдение · домофоны · системы безопасности</span>
-          <span class="person__name">Айнагуль — WhatsApp</span>
-          <span class="person__phone">+7 700 096 99 67</span>
-        </a>
-        <a class="person person--freedo" href="https://wa.me/77472508062?text=Здравствуйте! Интересует FREEDO." target="_blank" rel="noopener" data-i="t220">
-          <span class="person__role">FREEDO · камеры</span>
-          <span class="person__name">Асима — WhatsApp</span>
-          <span class="person__phone">+7 747 250 80 62</span>
-        </a>
+
+        <details class="cbox" data-contact="ainagul">
+          <summary>
+            <span class="cbox__role" data-i="c1_role">Видеонаблюдение · домофоны · СКУД</span>
+            <span class="cbox__name" data-i="c1_name">Айнагуль</span>
+            <span class="cbox__hint" data-i="c_show">Показать контакты</span>
+            <span class="cbox__hint cbox__hint--hide" data-i="c_hide">Свернуть</span>
+          </summary>
+          <div class="cbox__body">
+            <a class="cbox__tel" href="tel:+77000969967" data-ch="tel" data-contact="ainagul">+7 700 096 99 67</a>
+            <a class="btn btn--gold cbox__wa" href="https://wa.me/77000969967?text=Здравствуйте! Хочу обсудить безопасность объекта." target="_blank" rel="noopener" data-ch="whatsapp" data-contact="ainagul" data-i="c_wa">Написать в WhatsApp</a>
+          </div>
+        </details>
+
+        <details class="cbox cbox--freedo" data-contact="asima">
+          <summary>
+            <span class="cbox__role" data-i="c2_role">FREEDO · камеры</span>
+            <span class="cbox__name" data-i="c2_name">Асима</span>
+            <span class="cbox__hint" data-i="c_show">Показать контакты</span>
+            <span class="cbox__hint cbox__hint--hide" data-i="c_hide">Свернуть</span>
+          </summary>
+          <div class="cbox__body">
+            <a class="cbox__tel" href="tel:+77472508062" data-ch="tel" data-contact="asima">+7 747 250 80 62</a>
+            <a class="btn btn--goldfill cbox__wa" href="https://wa.me/77472508062?text=Здравствуйте! Интересует FREEDO." target="_blank" rel="noopener" data-ch="whatsapp" data-contact="asima" data-i="c_wa">Написать в WhatsApp</a>
+          </div>
+        </details>
+
+        <details class="cbox cbox--soc" data-contact="soc">
+          <summary>
+            <span class="cbox__role" data-i="c3_role">Соцсети и почта</span>
+            <span class="cbox__name" data-i="c3_name">Instagram · Email</span>
+            <span class="cbox__hint" data-i="c_show">Показать контакты</span>
+            <span class="cbox__hint cbox__hint--hide" data-i="c_hide">Свернуть</span>
+          </summary>
+          <div class="cbox__body cbox__body--links">
+            <a href="https://www.instagram.com/atyrau_bestcomkz" target="_blank" rel="noopener" data-ch="instagram" data-contact="company">@atyrau_bestcomkz</a>
+            <a href="https://www.instagram.com/freedo.kz" target="_blank" rel="noopener" data-ch="instagram" data-contact="freedo">@freedo.kz</a>
+            <a href="mailto:info@bestcom.kz" data-ch="email" data-contact="company">info@bestcom.kz</a>
+          </div>
+        </details>
+
       </div>
 
       <ul class="contact__meta">
-        <li data-i="t221"><b>Instagram:</b> <a href="https://www.instagram.com/atyrau_bestcomkz" target="_blank" rel="noopener">@atyrau_bestcomkz</a> · <a href="https://www.instagram.com/freedo.kz" target="_blank" rel="noopener">@freedo.kz</a></li>
-        <li data-i="t222"><b>Email:</b> <a href="mailto:info@bestcom.kz">info@bestcom.kz</a></li>
         <li data-i="t223"><b>График:</b> Пн–Пт 9:30–18:00 · Сб 10:00–18:00 · Вс — выходной</li>
         <!-- TBD: адрес не подтверждён клиентом, ждём финальный адрес шоурума -->
         <li data-i="t224"><b>Адрес:</b> г. Атырау, ул. Темірханова 12А-1</li>
-        <li data-i="t225"><b>Отзывы:</b> <a href="https://2gis.kz/atyrau/geo/70000001051373711" target="_blank" rel="noopener">профиль в 2GIS</a></li>
+        <li data-i="t225"><b>Отзывы:</b> <a href="https://2gis.kz/atyrau/geo/70000001051373711" target="_blank" rel="noopener" data-ch="2gis" data-contact="company">профиль в 2GIS</a></li>
       </ul>
     </div>
 
