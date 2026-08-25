@@ -813,7 +813,14 @@ body::after{
 }
 @media(min-width:760px){.contact__next{grid-template-columns:repeat(3,1fr)}}
 @media(min-width:960px){
-  .contact__grid{grid-template-columns:1.05fr .95fr}
+  /* колонки одной ширины и одной высоты: форма тянется до низа,
+     слабину забирает поле «Объект и задача» */
+  .contact__grid{grid-template-columns:1fr 1fr;align-items:stretch}
+  .contact__form{align-self:stretch;justify-content:space-between}
+  /* поле «Объект и задача» забирает часть слабины, остальное уходит в отступы —
+     так форма дотягивается до низа левой колонки, не превращаясь в одно окно */
+  .contact__form .field--grow{flex:0 1 auto}
+  .contact__form .field--grow textarea{min-height:96px;max-height:150px}
   .contact__next{grid-column:1/-1;margin-top:14px}
 }
 
