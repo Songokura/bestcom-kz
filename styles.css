@@ -1206,6 +1206,17 @@ html[lang="kk"] .nav a{font-size:14px}
 }
 .case__dl dd{color:var(--white);line-height:1.45}
 
+/* широкий кейс: седьмой объект в сетке из трёх колонок оставался бы один в ряду
+   и оставлял дыру — вместо этого он занимает всю полосу и раскладывается
+   горизонтально: фото слева, разбор справа. */
+.case--wide{grid-column:1/-1}
+@media(min-width:900px){
+  .case--wide{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:stretch}
+  .case--wide .case__ph{aspect-ratio:auto;height:100%}
+  .case--wide .case__body{justify-content:center;padding:26px 28px}
+  .case--wide .case__name{font-size:24px}
+}
+
 .cases__more{margin-top:44px;border-top:1px solid var(--line);padding-top:28px}
 .cases__more-k{
   font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
