@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260826-10">
+  <link rel="stylesheet" href="styles.css?v=20260826-11">
 
   <script type="application/ld+json">
   {
@@ -98,7 +98,7 @@
       <a href="#otrasli" data-i="n080">Отрасли</a>
       <a href="#kak-rabotaem" data-i="n081">Как работаем</a>
       <a href="#o-kompanii" data-i="t003">О компании</a>
-      <a href="#otzyvy" data-i="v000">Отзывы</a>
+      <a href="bitrix24.html" data-i="bp06">Bitrix24</a>
       <a href="#freedo" class="nav__freedo" data-i="t005">FREEDO</a>
       <a href="#kontakty" data-i="t006">Контакты</a>
     </nav>
@@ -267,8 +267,8 @@
     <div class="svc__grid">
 
       <!-- 1. Видеонаблюдение -->
-      <article class="card card--photo card--wide rev" data-rev id="videonablyudenie">
-        <figure class="card__media">
+      <article class="card card--photo rev" data-rev id="videonablyudenie">
+        <figure class="card__media card__media--ph">
           <img src="assets/cam-wall.webp" alt="Видеонаблюдение: камеры на фасаде объекта" data-i-alt="a_cam" width="1000" height="672" loading="lazy" decoding="async">
           <figcaption class="card__badge" data-i="t043">Контур 01 · наблюдение</figcaption>
         </figure>
@@ -288,8 +288,9 @@
       </article>
 
       <!-- 2. СКУД -->
-      <article class="card card--device rev" data-rev id="skud-face-id">
-        <div class="device" aria-hidden="true">
+      <article class="card rev" data-rev id="skud-face-id">
+        <figure class="card__media card__media--dev">
+          <div class="device" aria-hidden="true">
           <svg viewBox="0 0 160 160">
             <rect x="26" y="18" width="108" height="124" rx="14" fill="none" stroke="#3FA9F5" stroke-width="2"/>
             <path d="M56 52c0-14 10-22 24-22s24 8 24 22c0 10-4 16-8 20m-32 0c-4-4-8-10-8-20" fill="none" stroke="#F7FAFD" stroke-width="2.5" stroke-linecap="round"/>
@@ -300,6 +301,8 @@
             <text x="80" y="126" text-anchor="middle" fill="#3FA9F5" font-size="10" font-family="Consolas,monospace">ACCESS · GRANTED</text>
           </svg>
         </div>
+          <figcaption class="card__badge" data-i="s02b">Контур 02 · доступ</figcaption>
+        </figure>
         <div class="card__body">
           <p class="card__num">02</p>
           <h3 class="card__h" data-i="t051">СКУД с Face&nbsp;ID</h3>
@@ -314,8 +317,9 @@
       </article>
 
       <!-- 3. Видеодомофоны -->
-      <article class="card card--device rev" data-rev id="videodomofony">
-        <div class="device" aria-hidden="true">
+      <article class="card rev" data-rev id="videodomofony">
+        <figure class="card__media card__media--dev">
+          <div class="device" aria-hidden="true">
           <svg viewBox="0 0 160 160">
             <rect x="46" y="14" width="68" height="132" rx="10" fill="none" stroke="#3FA9F5" stroke-width="2"/>
             <circle cx="80" cy="44" r="12" fill="none" stroke="#F7FAFD" stroke-width="2.5"/>
@@ -326,6 +330,8 @@
             <path class="device__wave" d="M120 34c8 8 8 14 0 22M128 28c12 12 12 22 0 34" stroke="#3FA9F5" stroke-width="2" fill="none" stroke-linecap="round"/>
           </svg>
         </div>
+          <figcaption class="card__badge" data-i="s03b">Контур 03 · вход</figcaption>
+        </figure>
         <div class="card__body">
           <p class="card__num">03</p>
           <h3 class="card__h" data-i="t057">Видеодомофоны</h3>
@@ -340,9 +346,9 @@
 
       <!-- 4. Шлагбаумы -->
       <article class="card card--photo rev" data-rev id="shlagbaumy">
-        <figure class="card__media">
+        <figure class="card__media card__media--ph">
           <img src="assets/parking.webp" alt="Контроль въезда: автоматический шлагбаум на паркинге" data-i-alt="a_gate" width="1000" height="669" loading="lazy" decoding="async">
-          <figcaption class="card__badge" data-i="t062">Контроль въезда</figcaption>
+          <figcaption class="card__badge" data-i="t062">Контур 04 · въезд</figcaption>
         </figure>
         <div class="card__body">
           <p class="card__num">04</p>
@@ -357,8 +363,9 @@
       </article>
 
       <!-- 5. Сигнализация -->
-      <article class="card card--device rev" data-rev id="signalizaciya">
-        <div class="device" aria-hidden="true">
+      <article class="card rev" data-rev id="signalizaciya">
+        <figure class="card__media card__media--dev">
+          <div class="device" aria-hidden="true">
           <svg viewBox="0 0 160 160">
             <circle cx="80" cy="76" r="44" fill="none" stroke="#3FA9F5" stroke-width="2"/>
             <circle cx="80" cy="76" r="30" fill="none" stroke="#F7FAFD" stroke-width="2" opacity=".6"/>
@@ -367,6 +374,8 @@
             <text x="80" y="140" text-anchor="middle" fill="#3FA9F5" font-size="10" font-family="Consolas,monospace">SMOKE · MOTION · ALARM</text>
           </svg>
         </div>
+          <figcaption class="card__badge" data-i="s05b">Контур 05 · тревога</figcaption>
+        </figure>
         <div class="card__body">
           <p class="card__num">05</p>
           <h3 class="card__h" data-i="t068">Пожарная и охранная сигнализация</h3>
@@ -528,19 +537,7 @@
           </dl>
         </div>
       </article>
-      <article class="case rev" data-rev>
-        <figure class="case__ph"><img src="assets/case-okstroy.webp" alt="ТОО OKSTROY — внедрение CRM-системы от BestComKZ" width="1200" height="800" loading="lazy" decoding="async"></figure>
-        <div class="case__body">
-          <p class="case__kind" data-i="c06k">Автоматизация</p>
-          <h3 class="case__name" data-i="c06n">ТОО OKSTROY</h3>
-          <dl class="case__dl">
-            <dt data-i="n020">Задача</dt><dd data-i="c06t">Заявки и сделки терялись между менеджерами и мессенджерами.</dd>
-            <dt data-i="n021">Решение</dt><dd data-i="c06s">Внедрение CRM-системы с обучением команды.</dd>
-            <dt data-i="n022">Результат</dt><dd data-i="c06r">Каждое обращение фиксируется и доходит до сделки, руководитель видит этап по каждой заявке.</dd>
-          </dl>
-        </div>
-      </article>
-      <article class="case case--solo rev" data-rev>
+            <article class="case rev" data-rev>
         <figure class="case__ph"><img src="assets/case-ya.webp" alt="Бизнес-центр Turan TW в Атырау — фитнес-клуб «YA» под видеонаблюдением BestComKZ" width="738" height="492" loading="lazy" decoding="async"></figure>
         <div class="case__body">
           <p class="case__kind" data-i="c07k">Фитнес-клуб</p>
@@ -758,85 +755,12 @@
   </div>
 </section>
 
-<!-- ВИДЕООТЗЫВЫ ПО BITRIX24 -->
-<!-- Видео с канала клиента @atyrau_bestcomkz. Ролики вертикальные, поэтому
-     плитка портретная. Iframe НЕ грузится, пока не нажали play (фасад) —
-     иначе три плеера YouTube тянут ~1.5 МБ на каждой загрузке страницы. -->
-<section class="vrev" id="otzyvy" aria-label="Видеоотзывы клиентов о внедрении Bitrix24">
-  <div class="wrap">
-    <header class="sechead rev" data-rev>
-      <p class="sechead__k"><i class="sechead__n">08</i><span data-i="v001">Отзывы · Bitrix24</span></p>
-      <h2 class="sechead__h" data-i="v002">Про CRM лучше расскажут <em>те, кто с ней уже работает</em></h2>
-      <p class="sechead__s" data-i="v003">Три коротких видео от компаний Атырау, которым мы внедрили Bitrix24.
-      Без монтажа «под нас»: как было до, что поменялось после и что реально даёт система в будни.</p>
-    </header>
-
-    <div class="vrev__grid">
-      <article class="vrev__c rev" data-rev>
-        <div class="vrev__media" data-yt="et7e5x377VI">
-          <button class="vrev__play" type="button" data-i-aria="v_a1"
-            aria-label="Смотреть видеоотзыв: заявки терялись, менеджеры путались — пока не внедрили Bitrix24">
-            <span class="vrev__shine" aria-hidden="true"></span>
-            <span class="vrev__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 6.5v11a1 1 0 0 0 1.5.87l9-5.5a1 1 0 0 0 0-1.74l-9-5.5A1 1 0 0 0 9 6.5Z"/></svg>
-            </span>
-            <span class="vrev__dur" data-i="v_watch">Смотреть отзыв</span>
-          </button>
-        </div>
-        <p class="vrev__k" data-i="v004">Отдел продаж</p>
-        <h3 class="vrev__h" data-i="v005">«Заявки терялись, менеджеры путались… Пока не внедрили Bitrix24»</h3>
-        <a class="vrev__link" href="https://youtu.be/et7e5x377VI" target="_blank" rel="noopener" data-ch="youtube" data-contact="review" data-i="v_yt">Открыть на YouTube</a>
-      </article>
-
-      <article class="vrev__c rev" data-rev>
-        <div class="vrev__media" data-yt="nUV2HHxR518">
-          <button class="vrev__play" type="button" data-i-aria="v_a2"
-            aria-label="Смотреть видеоотзыв: как мы превратили хаос в систему с Bitrix24">
-            <span class="vrev__shine" aria-hidden="true"></span>
-            <span class="vrev__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 6.5v11a1 1 0 0 0 1.5.87l9-5.5a1 1 0 0 0 0-1.74l-9-5.5A1 1 0 0 0 9 6.5Z"/></svg>
-            </span>
-            <span class="vrev__dur" data-i="v_watch">Смотреть отзыв</span>
-          </button>
-        </div>
-        <p class="vrev__k" data-i="v006">Управление командой</p>
-        <h3 class="vrev__h" data-i="v007">«Как мы превратили хаос в систему с Bitrix24»</h3>
-        <a class="vrev__link" href="https://youtu.be/nUV2HHxR518" target="_blank" rel="noopener" data-ch="youtube" data-contact="review" data-i="v_yt">Открыть на YouTube</a>
-      </article>
-
-      <article class="vrev__c rev" data-rev>
-        <div class="vrev__media" data-yt="HIeiuKDYhlo">
-          <button class="vrev__play" type="button" data-i-aria="v_a3"
-            aria-label="Смотреть видеоотзыв клиента skolioz.kz о внедрении Bitrix24">
-            <span class="vrev__shine" aria-hidden="true"></span>
-            <span class="vrev__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 6.5v11a1 1 0 0 0 1.5.87l9-5.5a1 1 0 0 0 0-1.74l-9-5.5A1 1 0 0 0 9 6.5Z"/></svg>
-            </span>
-            <span class="vrev__dur" data-i="v_watch">Смотреть отзыв</span>
-          </button>
-        </div>
-        <p class="vrev__k" data-i="v008">Клиника · skolioz.kz</p>
-        <h3 class="vrev__h" data-i="v009">«Отзыв клиента: как CRM навела порядок в бизнесе»</h3>
-        <a class="vrev__link" href="https://youtu.be/HIeiuKDYhlo" target="_blank" rel="noopener" data-ch="youtube" data-contact="review" data-i="v_yt">Открыть на YouTube</a>
-      </article>
-    </div>
-
-    <div class="vrev__foot rev" data-rev>
-      <p data-i="v010">Хотите так же — разобрать свою воронку и посмотреть, где теряются заявки?
-      Аудит процессов бесплатный, как и аудит объекта.</p>
-      <div class="vrev__acts">
-        <a class="btn btn--acc" href="https://wa.me/77000969967?text=Здравствуйте! Хочу обсудить внедрение Bitrix24." target="_blank" rel="noopener" data-ch="whatsapp" data-contact="bitrix24" data-i="v011">Обсудить Bitrix24</a>
-        <a class="btn btn--ghost" href="https://www.youtube.com/@atyrau_bestcomkz" target="_blank" rel="noopener" data-ch="youtube" data-contact="channel" data-i="v012">Все видео на канале</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- КОМАНДА -->
 <section class="team" id="komanda" aria-label="Команда BestComKZ">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k"><i class="sechead__n">09</i><span data-i="t137">Кто работает с вашим объектом</span></p>
+      <p class="sechead__k"><i class="sechead__n">08</i><span data-i="t137">Кто работает с вашим объектом</span></p>
       <h2 class="sechead__h" data-i="t138">Команда, <em>а не безымянный колл-центр</em></h2>
       <p class="sechead__s" data-i="t139">Вы знаете, кто приедет на аудит, кто настроит систему и кому писать,
       если что-то пошло не так. Это небольшая компания — и в этом её преимущество.</p>
@@ -920,108 +844,25 @@
 </section>
 
 <!-- ЦИФРОВОЙ КОНТУР -->
-<section class="digital" aria-label="Автоматизация бизнеса">
-  <div class="wrap">
-    <header class="sechead rev" data-rev>
-      <p class="sechead__k"><i class="sechead__n">10</i><span data-i="t174">BestCom Digital — автоматизация и защита от потерь</span></p>
-      <h2 class="sechead__h" data-i="t175">Потери бывают не только на складе.<br><em>Заявки тоже воруют</em> — хаос и невнимательность.</h2>
-    </header>
 
-    <div class="digital__grid">
-      <article class="card card--photo rev" data-rev id="bitrix24">
-        <figure class="card__media">
-          <img src="assets/crm-dash.webp" alt="Bitrix24 CRM: контроль заявок и сделок" data-i-alt="a_crm" width="1000" height="667" loading="lazy" decoding="async">
-        </figure>
-        <div class="card__body">
-          <p class="card__num">01</p>
-          <h3 class="card__h" data-i="t176">Bitrix24 CRM + автоматизация</h3>
-          <p class="card__t" data-i="t177">Заявки не теряются в переписках и блокнотах: каждая доходит до сделки,
-          каждый этап — под контролем руководителя.</p>
-          <ul class="card__spec">
-            <li data-i="b001"><b>CRM держит продажи:</b> каждая заявка фиксируется, сделки распределяются, видно, где воронка теряет деньги</li>
-            <li data-i="b002"><b>Задачи и проекты:</b> сроки, роли и реальный прогресс — срыв видно заранее, а не по факту</li>
-            <li data-i="b003"><b>Одно окно для общения:</b> Instagram, WhatsApp, Telegram и звонки в одной системе, история сохраняется сама</li>
-          </ul>
-          <p class="card__tags" data-i="t178"><span>внедрение под ключ</span><span>обучение команды</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересует внедрение Bitrix24." target="_blank" rel="noopener" data-i="t179">Обсудить в WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="card card--photo rev" data-rev id="ai-assistenty">
-        <figure class="card__media">
-          <img src="assets/ai-chat.webp" alt="AI-ассистент отвечает клиентам в WhatsApp и Instagram" data-i-alt="a_ai" width="1000" height="667" loading="lazy" decoding="async">
-        </figure>
-        <div class="card__body">
-          <p class="card__num">02</p>
-          <h3 class="card__h" data-i="t180">AI-ассистенты WhatsApp / Instagram</h3>
-          <p class="card__t" data-i="t181">Отвечают клиентам за секунды — ночью, в выходные, без отпусков.
-          Ни одно обращение не остаётся без ответа.</p>
-          <ul class="card__spec">
-            <li data-i="b004"><b>Квалификация без менеджера:</b> ассистент сам уточняет задачу и передаёт в продажи только целевые обращения</li>
-            <li data-i="b005"><b>Разбор звонков и переписок:</b> где сделка буксует и что сказать клиенту — подсказка руководителю, а не догадки</li>
-          </ul>
-          <p class="card__tags" data-i="t182"><span>автоответы 24/7</span><span>обработка лидов</span></p>
-          <a class="card__cta" href="https://wa.me/77000969967?text=Здравствуйте! Интересуют AI-ассистенты для WhatsApp/Instagram." target="_blank" rel="noopener" data-i="t183">Обсудить в WhatsApp</a>
-        </div>
-      </article>
+<!-- FAQ -->
+<!-- ПЕРЕХОД НА СТРАНИЦУ АВТОМАТИЗАЦИИ -->
+<section class="bridge" aria-label="Автоматизация бизнеса">
+  <div class="wrap bridge__in">
+    <div class="bridge__txt">
+      <p class="bridge__k" data-i="bp10">BestCom Digital</p>
+      <h2 class="bridge__h" data-i="bp11">Потери бывают не только на складе</h2>
+      <p class="bridge__t" data-i="bp12">Bitrix24, AI-ассистенты и связка 1С с кассой вынесены на отдельную
+      страницу — чтобы выбор охранной системы не мешался с автоматизацией. Подрядчик тот же.</p>
     </div>
-
-    <!-- Комплексное решение 1С + видеонаблюдение и блок гарантий — из презентации клиента
-         `_project/source/Bitrix24 1600PX.pdf`. Цифры (−95%, 150 000 ₸, 12 месяцев, штраф
-         за просрочку) — заявления самой компании из её материала.
-         TBD: подтвердить у Ерлана, что подарок и штраф за срок действуют сейчас. -->
-    <article class="combo rev" data-rev id="1c-video">
-      <div class="combo__body">
-        <p class="combo__k" data-i="b006">Комплексное решение</p>
-        <h3 class="combo__h" data-i="b007">1С + видеонаблюдение: касса под двойным контролем</h3>
-        <p class="combo__t" data-i="b008">Камера над кассой и чек из 1С сходятся в одной записи. Отмена, скидка,
-        возврат, «продажа мимо кассы» — каждая операция видна вместе с видео, а не только строкой в отчёте.</p>
-        <p class="combo__gift" data-i="b009">При одновременном заказе внедрения 1С и видеонаблюдения автоматизацию
-        контроля кассиров ставим в подарок.</p>
-        <a class="btn btn--acc" href="https://wa.me/77000969967?text=Здравствуйте! Интересует связка 1С и видеонаблюдения для кассовой зоны." target="_blank" rel="noopener" data-ch="whatsapp" data-contact="1c-video" data-i="b010">Посчитать для моей кассы</a>
-      </div>
-      <ul class="combo__nums">
-        <li><span class="combo__n">−95<b>%</b></span><span class="combo__l" data-i="b011">недостач на кассе и складе</span></li>
-        <li><span class="combo__n">150 000<b> ₸</b></span><span class="combo__l" data-i="b012">до этой суммы экономии в месяц</span></li>
-        <li><span class="combo__n">1<b> экран</b></span><span class="combo__l" data-i="b013">чек, видео и остаток — в одном месте</span></li>
-      </ul>
-    </article>
-
-    <div class="guar rev" data-rev>
-      <p class="guar__k" data-i="b014">Юридически и технически — обязательства на бумаге</p>
-      <ul class="guar__list">
-        <li data-i="b015"><b>Договор с условиями</b><span>всё прописано заранее — без скрытых платежей и «доработок за отдельные деньги»</span></li>
-        <li data-i="b016"><b>Гарантия 12 месяцев</b><span>на все работы и оборудование — используем только проверенные решения</span></li>
-        <li data-i="b017"><b>Сроки под штраф</b><span>за каждый день просрочки — штраф в вашу пользу, а не извинения</span></li>
-        <li data-i="b018"><b>Поддержка 24/7</b><span>проблему решаем в течение 24 часов, по проекту — регулярные отчёты</span></li>
-      </ul>
-    </div>
-
-    <p class="digital__sum rev" data-rev data-i="n090">Безопасность и автоматизация — в одной компании.
-    Не нужно сводить между собой подрядчика по камерам, айтишника и внедренца CRM.</p>
-
-    <!-- TBD: направления с действующего сайта, которых не было в брифе Ерлана.
-         Оставлены компактной строкой компетенций — подтвердить, выносить ли их
-         в полноценные блоки лэндинга. -->
-    <div class="extra rev" data-rev>
-      <p class="extra__k" data-i="t184">Смежные компетенции — закрываем тем же подрядчиком</p>
-      <ul class="extra__list">
-        <li data-i="t185"><b>ИТ-инфраструктура и СКС</b><span>монтаж сетей, серверная, кабельные трассы</span></li>
-        <li data-i="t186"><b>Резервирование данных</b><span>чтобы архив и база не исчезли вместе с диском</span></li>
-        <li data-i="t187"><b>Интеграция с 1С</b><span>продажи и склад в одной картине с CRM</span></li>
-        <li data-i="t188"><b>Корпоративная телефония</b><span>звонки записываются и привязаны к сделке</span></li>
-        <li data-i="t189"><b>Воронки продаж</b><span>видно, на каком этапе теряются заявки</span></li>
-        <li data-i="t190"><b>Учёт рабочего времени</b><span>WorkPace: простои и переработки — цифрами</span></li>
-      </ul>
-    </div>
+    <a class="btn btn--acc bridge__cta" href="bitrix24.html" data-i="bp13">Автоматизация бизнеса →</a>
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq" id="faq" aria-label="Частые вопросы">
   <div class="wrap">
     <header class="sechead rev" data-rev>
-      <p class="sechead__k"><i class="sechead__n">11</i><span data-i="t199">Прежде чем звонить</span></p>
+      <p class="sechead__k"><i class="sechead__n">09</i><span data-i="t199">Прежде чем звонить</span></p>
       <h2 class="sechead__h" data-i="t200">Вопросы, которые нам задают <em>чаще всего</em></h2>
     </header>
 
@@ -1209,15 +1050,15 @@
       <a href="#shlagbaumy" data-i="t239">Шлагбаумы</a>
       <a href="#signalizaciya" data-i="t240">Сигнализация</a>
       <a href="#freedo" data-i="t241">FREEDO</a>
-      <a href="#bitrix24" data-i="t242">Bitrix24</a>
-      <a href="#ai-assistenty" data-i="t243">AI-ассистенты</a>
+      <a href="bitrix24.html#bitrix24" data-i="t242">Bitrix24</a>
+      <a href="bitrix24.html#ai-assistenty" data-i="t243">AI-ассистенты</a>
       <a href="#obekty" data-i="t244">Объекты</a>
       <a href="#otrasli" data-i="n080">Отрасли</a>
       <a href="#kak-rabotaem" data-i="n081">Как работаем</a>
       <a href="#partnery" data-i="t245">Партнёрства</a>
       <a href="#o-kompanii" data-i="t246">О компании</a>
       <a href="#komanda" data-i="t247">Команда</a>
-      <a href="#otzyvy" data-i="v000">Отзывы</a>
+      <a href="bitrix24.html" data-i="bp06">Bitrix24</a>
       <a href="#faq" data-i="t248">Вопросы</a>
       <a href="#kontakty" data-i="t249">Контакты</a>
     </nav>
@@ -1242,6 +1083,6 @@
   </figure>
 </div>
 
-<script src="script.js?v=20260826-10" defer></script>
+<script src="script.js?v=20260826-11" defer></script>
 </body>
 </html>
