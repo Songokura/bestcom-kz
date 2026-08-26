@@ -1211,12 +1211,11 @@ html[lang="kk"] .nav a{font-size:14px}
   font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
   color:var(--mut);margin-bottom:16px;
 }
-.cases__list{
-  display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  align-items:stretch;
-}
+/* объектов семь — при сетке auto-fit последний ряд оставлял дыру справа (4+3).
+   Центрированный флекс: неполный ряд встаёт по центру. */
+.cases__list{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
 .cases__list li{
-  display:flex;flex-direction:column;align-items:flex-start;gap:8px;
+  display:flex;flex-direction:column;align-items:flex-start;gap:8px;flex:1 1 100%;
   background:var(--card-bg);border:1px solid var(--line);border-radius:12px;
   box-shadow:var(--card-sh);padding:18px 20px;
   transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease;
@@ -1230,8 +1229,18 @@ html[lang="kk"] .nav a{font-size:14px}
   font-family:var(--font-d);font-weight:700;font-size:20px;line-height:1.2;
   color:var(--white);
 }
-.cases__list em{font-style:normal;font-size:14.5px;color:var(--mut);margin-top:auto}
+/* без margin-top:auto — иначе в ряду с двухстрочным названием («Французский квартал»)
+   у карточки с коротким именем («YA») вид работ улетал вниз и в середине зияла дыра.
+   Текст идёт подряд, а лишняя высота уходит в нижний отступ карточки. */
+.cases__list em{font-style:normal;font-size:14.5px;color:var(--mut);line-height:1.45}
 .cases__note{margin-top:22px;font-size:15px;color:var(--mut)}
+@media(min-width:640px){
+  .cases__list li{flex:1 1 calc(50% - 7px);max-width:calc(50% - 7px)}
+}
+@media(min-width:1000px){
+  .cases__list li{flex-basis:calc(25% - 10.5px);max-width:calc(25% - 10.5px)}
+}
+
 
 /* ---------- ОТРАСЛИ ---------- */
 .ind{padding:60px 0 80px}
