@@ -351,16 +351,26 @@ html[lang="kk"] .nav a{font-size:14px}
 
 /* ---------- section head ---------- */
 .sechead{margin-bottom:44px;position:relative}
+/* кикер: ромб + номер секции + подпись. Номер лежит ВНЕ элемента с data-i,
+   иначе applyLang затрёт его вместе с текстом при переключении языка. */
 .sechead__k{
-  font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--acc-hi);
-  display:flex;align-items:center;gap:14px;
+  font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);
+  display:flex;align-items:flex-start;line-height:1.5;
 }
-.sechead__k::before{content:"";width:38px;height:2px;border-radius:2px;background:var(--grad);box-shadow:0 0 10px rgba(63,169,245,.6);flex:none}
+.sechead__n{
+  font-style:normal;color:var(--acc);letter-spacing:.08em;margin-right:10px;
+  display:inline-flex;align-items:center;flex:none;line-height:inherit;
+}
+.sechead__n::before{
+  content:"";width:7px;height:7px;background:var(--acc);transform:rotate(45deg);margin-right:9px;flex:none;
+}
 .sechead__h{
   font-family:var(--font-d);font-weight:700;margin-top:14px;
-  font-size:clamp(27px,4.4vw,44px);line-height:1.15;max-width:26ch;
+  font-size:clamp(27px,4.4vw,44px);line-height:1.15;
 }
-.sechead__s{margin-top:16px;max-width:62ch;color:var(--mut);font-size:clamp(15px,2vw,17px)}
+/* акцентная часть заголовка — курсивом цветом акцента */
+.sechead__h em{font-style:italic;font-weight:600;color:var(--acc)}
+.sechead__s{margin-top:16px;color:var(--mut);font-size:clamp(15px,2vw,17px)}
 
 /* ---------- services bento ---------- */
 .svc{padding:30px 0 60px}
@@ -1314,15 +1324,6 @@ html[lang="kk"] .nav a{font-size:14px}
   body{padding-bottom:82px}
 }
 
-
-/* ============================================================
-   Шапка секции: крупный заголовок во всю ширину полосы,
-   мелкий подзаголовок — строкой ниже.
-   ============================================================ */
-@media(min-width:1000px){
-  .sechead__h{max-width:none}
-  .sechead__s{max-width:72ch}
-}
 
 
 /* ============================================================
