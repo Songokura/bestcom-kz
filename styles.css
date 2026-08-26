@@ -9,10 +9,10 @@
   /* СВЕТЛАЯ ТЕМА — основной фон сайта.
      Тёмные «островки» (hero, манифест, FREEDO, финальный CTA, подвал)
      переопределяют те же переменные через .on-dark — компоненты не меняются. */
-  --navy:#F4F7FB;         /* фон страницы */
-  --navy-2:#FFFFFF;       /* светлые панели */
+  --navy:#E6EFFA;         /* фон страницы — светло-синий */
+  --navy-2:#F2F7FD;       /* светлые панели */
   --navy-3:#FFFFFF;       /* карточки */
-  --line:#DCE5F0;
+  --line:#C7DAEF;
   --acc:#0B7BE8;
   --acc-2:#0B63E5;
   --acc-hi:#0A57C9;
@@ -26,9 +26,9 @@
   --white:#0B1B2E;        /* основной текст */
   --mut:#56708A;
   --on-acc:#FFFFFF;       /* текст на заливке акцентом */
-  --card-sh:0 1px 2px rgba(11,27,46,.06),0 10px 30px -14px rgba(11,27,46,.22);
+  --card-sh:0 1px 2px rgba(11,40,80,.07),0 10px 28px -16px rgba(11,40,80,.28);
   --card-bg:#FFFFFF;
-  --surf-2:#EDF3FA;      /* приглушённая панель */
+  --surf-2:#D9E7F7;      /* приглушённая панель */
   --tint:rgba(11,99,229,.06);
   --card-hover-sh:0 3px 6px rgba(11,27,46,.07),0 22px 48px -20px rgba(11,27,46,.32);
   --card-hover-line:rgba(11,99,229,.45);
@@ -90,7 +90,7 @@ ul,ol{list-style:none}
 body::before{
   content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background:
-    radial-gradient(760px 520px at 12% -6%, rgba(11,99,229,.06), transparent 62%),
+    radial-gradient(760px 520px at 12% -6%, rgba(11,99,229,.07), transparent 62%),
     radial-gradient(680px 480px at 92% 22%, rgba(11,99,229,.05), transparent 64%);
 }
 .hdr,main,.foot{position:relative;z-index:1}
@@ -148,7 +148,7 @@ body::after{
   border-bottom:1px solid rgba(23,52,83,.7);
   transition:background .3s ease;
 }
-.hdr.scrolled{background:rgba(255,255,255,.96);box-shadow:0 8px 28px rgba(11,27,46,.14)}
+.hdr.scrolled{background:rgba(238,245,253,.96);box-shadow:0 8px 28px rgba(11,40,80,.16)}
 .hdr__in{
   max-width:var(--wrap);margin:0 auto;padding:0 20px;height:68px;
   display:flex;align-items:center;gap:24px;
@@ -639,7 +639,12 @@ body::after{
 /* сотрудников шестеро — сетка делится нацело: 2×3 на планшете, 3×2 на десктопе.
    Ряды без «хвоста», карточки одного размера, директор выделен гранью, а не площадью. */
 @media(min-width:720px){.team__grid{grid-template-columns:1fr 1fr}}
-@media(min-width:1080px){.team__grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1080px){
+  /* пять карточек: три сверху, две пошире снизу — без пустого места */
+  .team__grid{grid-template-columns:repeat(6,1fr)}
+  .team__grid > *{grid-column:span 2}
+  .team__grid > *:nth-child(4),.team__grid > *:nth-child(5){grid-column:span 3}
+}
 
 /* ---------- FREEDO — остров ----------
    FREEDO — отдельный продукт, поэтому внутри секции палитра смещена
@@ -1097,7 +1102,7 @@ body::after{
 
 /* шапка: тёмная над hero, светлая после скролла */
 .hdr.scrolled{
-  --navy:#F4F7FB; --navy-2:#FFFFFF; --navy-3:#FFFFFF; --line:#DCE5F0;
+  --navy:#E6EFFA; --navy-2:#F2F7FD; --navy-3:#FFFFFF; --line:#C7DAEF;
   --acc:#0B7BE8; --acc-hi:#0A57C9; --ink:#0B1B2E; --sky:#0B63E5;
   --white:#0B1B2E; --mut:#56708A; --on-acc:#FFFFFF;
   --grad:linear-gradient(135deg,#1478DF 0%,#0B63E5 50%,#0A4EBE 100%);
@@ -1112,8 +1117,16 @@ body::after{
 .loss{padding:70px 0 40px}
 .loss__grid{
   display:grid;gap:16px;margin-top:34px;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  grid-template-columns:repeat(6,1fr);
 }
+/* пять карточек: три сверху, две пошире снизу — без пустого места */
+.loss__i{grid-column:span 2}
+.loss__i:nth-child(4),.loss__i:nth-child(5){grid-column:span 3}
+@media(max-width:900px){
+  .loss__grid{grid-template-columns:repeat(2,1fr)}
+  .loss__i,.loss__i:nth-child(4),.loss__i:nth-child(5){grid-column:auto}
+}
+@media(max-width:560px){.loss__grid{grid-template-columns:1fr}}
 .loss__i{
   background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r);
   padding:22px 20px 20px;
@@ -1161,9 +1174,12 @@ body::after{
 }
 .cases__list{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .cases__list li{
-  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
-  padding:10px 0;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:auto 1fr;gap:3px 10px;align-items:center;
+  padding:12px 0;border-bottom:1px solid var(--line);
 }
+.cases__list i{grid-row:1;grid-column:1;align-self:center}
+.cases__list span{grid-row:1;grid-column:2}
+.cases__list em{grid-row:2;grid-column:2}
 .cases__list i{
   font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
   color:var(--acc-2);background:var(--acc-soft);padding:3px 8px;border-radius:5px;flex:none;
@@ -1255,7 +1271,7 @@ body::after{
     display:flex;gap:10px;align-items:center;
     position:fixed;left:12px;right:12px;bottom:12px;z-index:60;
     padding:10px;border-radius:14px;
-    background:rgba(255,255,255,.93);backdrop-filter:blur(12px);
+    background:rgba(240,246,253,.95);backdrop-filter:blur(12px);
     border:1px solid var(--line);box-shadow:0 10px 34px rgba(11,27,46,.22);
   }
   .sticky-cta .btn{flex:1;justify-content:center;min-height:48px;font-size:15.5px}
