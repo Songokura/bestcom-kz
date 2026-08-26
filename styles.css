@@ -480,41 +480,62 @@ html[lang="kk"] .nav a{font-size:14px}
   .cases__grid{grid-template-columns:1.05fr .95fr;align-items:start}
 }
 
-/* ---------- certs ---------- */
+/* ---------- certs ----------
+   Карточка = настоящий скан документа + подпись. Клик открывает лайтбокс,
+   поэтому это <button>, а не <article>: нужны фокус и Enter с клавиатуры. */
 .certs{padding:70px 0 90px}
+.certs__group{margin-top:30px}
+.certs__gk{
+  font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--sky);margin-bottom:14px;
+}
 .certs__grid{display:grid;gap:14px;grid-template-columns:1fr}
 .cert{
-  min-width:0;position:relative;overflow:hidden;
+  min-width:0;position:relative;display:block;width:100%;
+  text-align:left;font:inherit;color:inherit;cursor:zoom-in;-webkit-appearance:none;appearance:none;
   border:1px solid rgba(63,169,245,.28);border-radius:12px;
-  padding:24px 22px 22px;
+  padding:14px 14px 18px;
   background:
     radial-gradient(circle at 50% -20%,rgba(63,169,245,.1),transparent 62%),
     var(--card-bg);
   transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease;
 }
-.cert:hover{border-color:var(--acc);transform:translateY(-4px);box-shadow:0 20px 46px rgba(0,0,0,.35)}
-/* «гильоширная» рамка документа */
-.cert::before{
-  content:"";position:absolute;inset:7px;border:1px solid rgba(63,169,245,.16);border-radius:8px;pointer-events:none;
+.cert:hover{border-color:var(--card-hover-line);transform:translateY(-4px);box-shadow:var(--card-hover-sh)}
+.cert:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+
+/* превью документа: contain, чтобы скан не обрезался по краям */
+.cert__shot{
+  position:relative;display:block;overflow:hidden;border-radius:9px;
+  aspect-ratio:4/3;background:var(--surf-2);border:1px solid var(--line);
 }
-.cert__seal{
-  width:54px;height:54px;flex:none;
-  filter:drop-shadow(0 0 14px rgba(63,169,245,.28));
+.cert__shot img{width:100%;height:100%;display:block;object-fit:contain;transition:transform .35s ease}
+.cert:hover .cert__shot img{transform:scale(1.03)}
+.cert__zoom{
+  position:absolute;right:8px;bottom:8px;display:grid;place-items:center;
+  width:32px;height:32px;border-radius:50%;color:#fff;
+  background:rgba(9,26,45,.74);
+  opacity:0;transform:translateY(5px);transition:opacity .25s ease,transform .25s ease;
 }
-.cert__seal svg{width:100%;height:100%;display:block}
-.cert:hover .cert__seal{animation:sealturn 5s linear infinite}
-@keyframes sealturn{to{transform:rotate(360deg)}}
+.cert:hover .cert__zoom,.cert:focus-visible .cert__zoom{opacity:1;transform:none}
+@media(hover:none){.cert__zoom{opacity:1;transform:none}}
 .cert__brand{
-  font-family:var(--font-d);font-weight:700;font-size:clamp(20px,2.4vw,25px);
-  letter-spacing:.07em;text-transform:uppercase;margin-top:16px;
+  display:block;font-family:var(--font-d);font-weight:700;font-size:clamp(19px,2.2vw,23px);
+  letter-spacing:.06em;text-transform:uppercase;margin-top:16px;
 }
 .cert__grade{
-  margin-top:5px;font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--acc);
-  overflow-wrap:break-word;hyphens:auto;
+  display:block;margin-top:5px;font-size:12px;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--acc);overflow-wrap:break-word;hyphens:auto;
 }
-.cert__t{margin-top:12px;font-size:14.5px;color:var(--mut);line-height:1.5}
+.cert__t{display:block;margin-top:11px;font-size:14.5px;color:var(--mut);line-height:1.5}
+.cert__meta{
+  display:block;margin-top:11px;padding-top:10px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--mut);line-height:1.45;
+}
 .cert--person{border-color:rgba(63,169,245,.32)}
 .cert--person .cert__grade{color:var(--sky)}
+
+/* вращение кольца — используется аватаром в блоке «Команда» */
+@keyframes sealturn{to{transform:rotate(360deg)}}
 
 /* строка брендов */
 .brands{
@@ -535,7 +556,7 @@ html[lang="kk"] .nav a{font-size:14px}
 }
 .brands__note{margin-top:18px;color:var(--mut);font-size:15px;max-width:64ch}
 @media(min-width:640px){
-  /* карточек нечётное число, поэтому не сетка, а центрированный флекс:
+  /* в группе статусов пять карточек, поэтому не сетка, а центрированный флекс:
      неполный последний ряд встаёт по центру, а не оставляет дыру справа */
   .certs__grid{display:flex;flex-wrap:wrap;justify-content:center}
   .certs__grid .cert{flex:1 1 calc(50% - 7px);max-width:calc(50% - 7px)}
@@ -1219,9 +1240,6 @@ html[lang="kk"] .nav a{font-size:14px}
 /* ---------- ПРОЦЕСС: четыре шага ---------- */
 
 
-/* ---------- СЕРТИФИКАТЫ ---------- */
-.certs__cta{margin:30px 0 10px;text-align:center}
-
 /* ---------- FREEDO: компактная полоса ---------- */
 .freedo__band{
   display:grid;gap:34px;align-items:center;
@@ -1262,7 +1280,6 @@ html[lang="kk"] .nav a{font-size:14px}
 
 /* тени панелей в светлой теме */
 .cert,.astat,.brands,.combo,.guar,.vrev__foot,.faq__i,.proc__steps li{box-shadow:var(--card-sh)}
-.cert__seal{color:var(--acc-2)}
 
 /* FREEDO: полоса выравнивается по левому краю колонки */
 .freedo__band .freedo__over,
@@ -1299,17 +1316,62 @@ html[lang="kk"] .nav a{font-size:14px}
 
 
 /* ============================================================
-   Шапка секции на широком экране: заголовок слева, подзаголовок справа.
-   Раньше заголовок был зажат в 22ch и обрывался на середине полосы.
+   Шапка секции: крупный заголовок во всю ширину полосы,
+   мелкий подзаголовок — строкой ниже.
    ============================================================ */
 @media(min-width:1000px){
-  .sechead{
-    display:grid;align-items:end;gap:18px 56px;
-    grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
-  }
-  .sechead__k{grid-column:1/-1}
-  .sechead__h{max-width:none;margin-top:0}
-  .sechead__s{margin-top:0;max-width:54ch;padding-bottom:8px}
-  /* если подзаголовка нет — заголовок занимает всю полосу */
-  .sechead:not(:has(.sechead__s)) .sechead__h{grid-column:1/-1;max-width:34ch}
+  .sechead__h{max-width:none}
+  .sechead__s{max-width:72ch}
+}
+
+
+/* ============================================================
+   ЛАЙТБОКС ДОКУМЕНТОВ
+   Сканы сертификатов мелкие в карточке — по клику открываем целиком.
+   Одна разметка на всю страницу, картинка подставляется из data-cert.
+   ============================================================ */
+.lbx{
+  position:fixed;inset:0;z-index:200;display:grid;place-items:center;
+  padding:26px 16px 20px;
+  background:rgba(6,18,32,.92);
+  animation:lbxin .18s ease both;
+}
+.lbx[hidden]{display:none}
+@keyframes lbxin{from{opacity:0}to{opacity:1}}
+.lbx__fig{
+  margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;
+  max-width:min(1080px,100%);max-height:100%;
+}
+.lbx__img{
+  display:block;width:auto;height:auto;
+  max-width:100%;max-height:calc(100dvh - 132px);
+  border-radius:10px;background:#fff;
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+}
+.lbx__cap{
+  color:#DCE8F5;font-size:14px;line-height:1.45;text-align:center;max-width:62ch;
+}
+.lbx__x,.lbx__nav{
+  position:absolute;display:grid;place-items:center;
+  width:44px;height:44px;border-radius:50%;
+  color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+  cursor:pointer;transition:background .2s ease,transform .2s ease;
+}
+.lbx__x:hover,.lbx__nav:hover{background:rgba(255,255,255,.24)}
+.lbx__x:focus-visible,.lbx__nav:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.lbx__x{top:14px;right:14px}
+.lbx__nav{top:50%;transform:translateY(-50%)}
+.lbx__nav--prev{left:12px}
+.lbx__nav--next{right:12px}
+.lbx__nav:hover{transform:translateY(-50%) scale(1.06)}
+body.lbx-open{overflow:hidden}
+@media(max-width:720px){
+  .lbx{padding:16px 10px 14px}
+  .lbx__img{max-height:calc(100dvh - 168px)}
+  .lbx__nav{top:auto;bottom:14px;transform:none;width:42px;height:42px}
+  .lbx__nav:hover{transform:scale(1.06)}
+  .lbx__nav--prev{left:calc(50% - 54px)}
+  .lbx__nav--next{right:calc(50% - 54px)}
+  .lbx__fig{gap:10px;padding-bottom:56px}
+  .lbx__cap{font-size:13px}
 }

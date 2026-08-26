@@ -113,14 +113,45 @@
     /* сертификаты */
     t085: 'Серіктестер және құжаттар',
     t086: 'Ресми серіктестік мәртебелер',
-    t087: 'Мәртебені өндіруші енгізу көлемі мен инженерлердің аттестациясы үшін береді. Сіз үшін бұл — тікелей жеткізілім, зауыттық кепілдік және вендордың инженерлік қолдауы. Құжаттарды сұраныс бойынша көрсетеміз.',
+    t087: 'Төменде — белгішелер емес, құжаттардың нақты сканерленген көшірмелері. Мәртебені өндіруші енгізу көлемі мен инженерлердің аттестациясы үшін береді: сіз үшін бұл — тікелей жеткізілім, зауыттық кепілдік және вендордың инженерлік қолдауы. Құжатты толық көру үшін оның үстінен басыңыз.',
     t090: 'Жоғары серіктестік деңгейі: тікелей жеткізу және вендордың басым қолдауы.',
     t093: 'Қазақстан бойынша эксклюзивті мәртебе — жобаларға арналған бөлек жеткізу желісі.',
     t096: 'Ресми дилер: орнында кепілдік және кепілдіктен кейінгі қызмет көрсету.',
-    t098: 'Серіктестік',
+    t098: 'Уәкілетті серіктес',
     t099: 'Желідегі екінші ірі вендор — мерзім мен үйлесімділік бойынша резерв.',
     t104: 'Сертификатталған маман',
     t105: 'Компания директоры Ерлан Айчановтың жеке аттестациясы.',
+    /* сертификаты: сканы, подписи и лайтбокс */
+    c000: 'Компания мәртебелері',
+    c018: 'Мамандардың аттестациялары',
+    t095: 'ҚР ресми дилері',
+    c001: '2025 жылғы сертификат · «BestComKZ» ЖШС',
+    c002: 'Hikvision Partner Program, 2023 жыл',
+    c004: 'Платиналық серіктес',
+    c005: 'Мәртебені бірінші жыл ғана растап отырған жоқпыз — платиналық деңгей 2022 жылы да болған.',
+    c006: '2022 жылғы сертификат',
+    c007: '2025 жылғы сертификат · «BestComKZ» ЖШС',
+    c008: '2026 жылғы дилер сертификаты',
+    c009: 'HCSA-092020-0327-04-4240 сертификаты',
+    c011: 'Монтаж және іске қосу',
+    c012: 'Вендордағы оқыту: Dahua бейнебақылау жүйелерін монтаждау және іске қосу.',
+    c013: '№671 сертификат · Dahua Technology Kazakhstan',
+    c015: 'CRM: Негіздері',
+    c016: 'Автоматтандыруды өзіміз енгіземіз: «1С-Битрикс» курсын мердігер емес, директордың өзі тапсырған.',
+    c017: '14.11.2025 сертификаты',
+    c019: 'Жабу',
+    c020: 'Алдыңғы құжат',
+    c021: 'Келесі құжат',
+    c022: 'Құжатты қарау',
+    c101: '«BestComKZ» ЖШС-ға берілген 2025 жылға арналған Hikvision Platinum Partner сертификаты',
+    c102: 'Hikvision Partner Program сертификаты: Exclusive Partner мәртебесі, 2023 жыл',
+    c103: '2022 жылғы Hikvision «Платиналық серіктес» сертификаты',
+    c104: 'Dahua Technology сертификаты: «BestComKZ» ЖШС — Қазақстандағы уәкілетті серіктес, 2025 жыл',
+    c105: 'Қазақстан аумағындағы IMOU дилер сертификаты, 2026 жыл',
+    c106: 'Ерлан Айчановтың атына берілген Hikvision Certified Security Associate сертификаты',
+    c107: 'Ерлан Айчановтың Dahua Technology Kazakhstan оқуынан өткені туралы сертификаты',
+    c108: 'Ерлан Айчановтың атына берілген «Битрикс24.CRM: Основы» сертификаты, 2025 жылғы қараша',
+
     t106: 'Жабдықпен жұмыс істейміз',
     t113: 'және тағы 100+ серіктес бренд',
     t114: 'Жабдықты жеткізушінің қоймасына емес, нысанның міндеті мен бюджетіне қарай таңдаймыз. Сертификаттардың түпнұсқасын кездесуде көрсетеміз.',
@@ -392,7 +423,6 @@
     n043: 'Жеке үйлер',
     n044: 'Периметр, дабыл жүйесі және FREEDO ақылды құлыптары — кілтсіз кіру.',
     n045: 'Нысаныма шешім таңдау',
-    n050: 'Сертификаттарды көру →',
     n060: '«ТТ жіберіңіз де күтіңіз» дегеніміз жоқ. Алғашқы шығу мен аудит — тегін, смета нысанды көргеннен кейін ғана пайда болады.',
     n061: 'Нысанға шығамыз',
     n062: 'Тегін. Жоспарлауды қараймыз, осал жерлер мен шығын нүктелерін табамыз.',
@@ -683,6 +713,74 @@
       trackEvent('review_play', { video: id, lang: currentLang });
     });
   });
+
+
+  /* ---------- лайтбокс документов ----------
+     В карточке скан мелкий: печати, номера и сроки читаются только целиком.
+     Открывается кликом по карточке, листается стрелками и клавишами,
+     закрывается Esc и кликом по фону. Фокус возвращается на карточку. */
+  var certBtns = Array.prototype.slice.call(document.querySelectorAll('[data-cert]'));
+  var lbx = document.getElementById('lbx');
+  if (certBtns.length && lbx) {
+    var lbxImg = document.getElementById('lbxImg');
+    var lbxCap = document.getElementById('lbxCap');
+    var lbxX = lbx.querySelector('[data-lbx="close"]');
+    var lbxIdx = 0;
+    var lbxFrom = null;
+
+    function lbxShow(i) {
+      lbxIdx = (i + certBtns.length) % certBtns.length;
+      var b = certBtns[lbxIdx];
+      var cap = (currentLang === 'kz' && b.getAttribute('data-cert-cap-kz')) ||
+                b.getAttribute('data-cert-cap') || '';
+      lbxImg.setAttribute('src', b.getAttribute('data-cert'));
+      lbxImg.setAttribute('alt', cap);
+      lbxCap.textContent = cap;
+    }
+
+    function lbxOpen(i, from) {
+      lbxFrom = from || null;
+      lbxShow(i);
+      lbx.hidden = false;
+      document.body.classList.add('lbx-open');
+      if (lbxX) lbxX.focus();
+      trackEvent('cert_open', {
+        cert: (certBtns[lbxIdx].getAttribute('data-cert') || '').replace('assets/', ''),
+        lang: currentLang
+      });
+    }
+
+    function lbxClose() {
+      lbx.hidden = true;
+      document.body.classList.remove('lbx-open');
+      lbxImg.removeAttribute('src');
+      if (lbxFrom) { lbxFrom.focus(); lbxFrom = null; }
+    }
+
+    certBtns.forEach(function (b, i) {
+      b.addEventListener('click', function () { lbxOpen(i, b); });
+    });
+
+    lbx.addEventListener('click', function (e) {
+      var hit = e.target.closest ? e.target.closest('[data-lbx]') : null;
+      if (hit) {
+        var act = hit.getAttribute('data-lbx');
+        if (act === 'close') lbxClose();
+        else if (act === 'prev') lbxShow(lbxIdx - 1);
+        else if (act === 'next') lbxShow(lbxIdx + 1);
+        return;
+      }
+      /* клик мимо самого документа = закрыть */
+      if (e.target === lbx || e.target.classList.contains('lbx__fig')) lbxClose();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (lbx.hidden) return;
+      if (e.key === 'Escape') lbxClose();
+      else if (e.key === 'ArrowLeft') lbxShow(lbxIdx - 1);
+      else if (e.key === 'ArrowRight') lbxShow(lbxIdx + 1);
+    });
+  }
 
   /* ---------- год в подвале ---------- */
   var y = document.getElementById('year');

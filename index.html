@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260826-4">
+  <link rel="stylesheet" href="styles.css?v=20260826-5">
 
   <script type="application/ld+json">
   {
@@ -621,60 +621,119 @@
     <header class="sechead rev" data-rev>
       <p class="sechead__k" data-i="t085">Партнёры и документы</p>
       <h2 class="sechead__h" data-i="t086">Официальные партнёрские статусы</h2>
-      <p class="sechead__s" data-i="t087">Статусы производитель выдаёт за объём внедрений и сданную аттестацию инженеров.
-      Для вас это прямые поставки, заводская гарантия и инженерная поддержка вендора —
-      то, чего нет у «просто установщиков». Документы показываем по запросу.</p>
+      <p class="sechead__s" data-i="t087">Ниже — настоящие сканы документов, а не иконки. Статусы производитель выдаёт
+      за объём внедрений и сданную аттестацию инженеров: для вас это прямые поставки,
+      заводская гарантия и инженерная поддержка вендора — то, чего нет у «просто установщиков».
+      Нажмите на документ, чтобы рассмотреть его целиком.</p>
     </header>
 
-    <!-- TBD: сканы сертификатов клиент присылает пакетом.
-         Когда придут — внутрь .cert__seal подставляется <img src="assets/cert-*.webp">,
-         остальная разметка не меняется. -->
-    <div class="certs__grid">
-      <article class="cert rev" data-rev>
-        <div class="cert__seal" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/><path d="M32 21l3.1 6.6 7.1 1-5.2 5.2 1.3 7.2-6.3-3.5-6.3 3.5 1.3-7.2-5.2-5.2 7.1-1z" fill="currentColor" opacity=".9"/></svg>
-        </div>
-        <p class="cert__brand" data-i="t088">Hikvision</p>
-        <p class="cert__grade" data-i="t089">Platinum Partner</p>
-        <p class="cert__t" data-i="t090">Высший партнёрский уровень: прямые поставки и приоритетная техподдержка вендора.</p>
-      </article>
-      <article class="cert rev" data-rev>
-        <div class="cert__seal" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/><path d="M22 32h20M32 22v20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </div>
-        <p class="cert__brand" data-i="t091">Hikvision</p>
-        <p class="cert__grade" data-i="t092">Exclusive Partner Kazakhstan</p>
-        <p class="cert__t" data-i="t093">Эксклюзивный статус по Казахстану — отдельная линия поставок под проекты.</p>
-      </article>
-      <article class="cert rev" data-rev>
-        <div class="cert__seal" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/><path d="M23 33l6 6 12-13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p class="cert__brand" data-i="t094">IMOU</p>
-        <p class="cert__grade" data-i="t095">Official Dealer RK</p>
-        <p class="cert__t" data-i="t096">Официальный дилер: гарантийное и постгарантийное обслуживание на месте.</p>
-      </article>
-      <article class="cert rev" data-rev>
-        <div class="cert__seal" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/><path d="M32 20l10 6v10c0 7-4.4 11.6-10 14-5.6-2.4-10-7-10-14V26z" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
-        </div>
-        <p class="cert__brand" data-i="t097">Dahua</p>
-        <p class="cert__grade" data-i="t098">Партнёрство</p>
-        <p class="cert__t" data-i="t099">Второй крупный вендор в линейке — резерв по срокам и совместимости.</p>
-      </article>
-      <article class="cert cert--person rev" data-rev>
-        <div class="cert__seal" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/><path d="M32 22a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M21 45c2-6 6-9 11-9s9 3 11 9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-        </div>
-        <p class="cert__brand" data-i="t103">HCSA</p>
-        <p class="cert__grade" data-i="t104">Сертифицированный специалист</p>
-        <p class="cert__t" data-i="t105">Личная аттестация директора компании — Ерлана Айчанова.</p>
-      </article>
+    <div class="certs__group rev" data-rev>
+      <p class="certs__gk" data-i="c000">Статусы компании</p>
+      <div class="certs__grid">
+      <button class="cert rev" type="button" data-rev data-cert="assets/cert-hikvision-platinum.webp" data-cert-cap="Hikvision · Platinum Partner · сертификат 2025 года" data-cert-cap-kz="Hikvision · Platinum Partner · 2025 жылғы сертификат">
+        <span class="cert__shot">
+          <img src="assets/cert-hikvision-platinum.webp" data-i-alt="c101" width="860" height="1200" loading="lazy" decoding="async" alt="Сертификат Hikvision Platinum Partner на 2025 год, выданный ТОО «BestComKZ»">
+          <span class="cert__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.8 15.8 21 21M11 8.4v5.2M8.4 11h5.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="cert__brand" data-i="t088">Hikvision</span>
+        <span class="cert__grade" data-i="t089">Platinum Partner</span>
+        <span class="cert__t" data-i="t090">Высший партнёрский уровень: прямые поставки и приоритетная техподдержка вендора.</span>
+        <span class="cert__meta" data-i="c001">Сертификат 2025 года · ТОО «BestComKZ»</span>
+      </button>
+      <button class="cert rev" type="button" data-rev data-cert="assets/cert-hikvision-exclusive.webp" data-cert-cap="Hikvision · Exclusive Partner Kazakhstan · сертификат 2023 года" data-cert-cap-kz="Hikvision · Exclusive Partner Kazakhstan · 2023 жылғы сертификат">
+        <span class="cert__shot">
+          <img src="assets/cert-hikvision-exclusive.webp" data-i-alt="c102" width="1200" height="911" loading="lazy" decoding="async" alt="Сертификат Hikvision Partner Program: статус Exclusive Partner, 2023 год">
+          <span class="cert__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.8 15.8 21 21M11 8.4v5.2M8.4 11h5.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="cert__brand" data-i="t091">Hikvision</span>
+        <span class="cert__grade" data-i="t092">Exclusive Partner</span>
+        <span class="cert__t" data-i="t093">Эксклюзивный статус по Казахстану — отдельная линия поставок под проекты.</span>
+        <span class="cert__meta" data-i="c002">Hikvision Partner Program, 2023 год</span>
+      </button>
+      <button class="cert rev" type="button" data-rev data-cert="assets/cert-hikvision-platinum-2022.webp" data-cert-cap="Hikvision · Платиновый партнёр · сертификат 2022 года" data-cert-cap-kz="Hikvision · Платиналық серіктес · 2022 жылғы сертификат">
+        <span class="cert__shot">
+          <img src="assets/cert-hikvision-platinum-2022.webp" data-i-alt="c103" width="1200" height="604" loading="lazy" decoding="async" alt="Сертификат Hikvision «Платиновый партнёр» 2022 года">
+          <span class="cert__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.8 15.8 21 21M11 8.4v5.2M8.4 11h5.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="cert__brand" data-i="c003">Hikvision</span>
+        <span class="cert__grade" data-i="c004">Платиновый партнёр</span>
+        <span class="cert__t" data-i="c005">Статус подтверждаем не первый год — платиновый уровень был и в 2022-м.</span>
+        <span class="cert__meta" data-i="c006">Сертификат 2022 года</span>
+      </button>
+      <button class="cert rev" type="button" data-rev data-cert="assets/cert-dahua-partner.webp" data-cert-cap="Dahua Technology · авторизованный партнёр в Казахстане · сертификат 2025 года" data-cert-cap-kz="Dahua Technology · Қазақстандағы уәкілетті серіктес · 2025 жылғы сертификат">
+        <span class="cert__shot">
+          <img src="assets/cert-dahua-partner.webp" data-i-alt="c104" width="848" height="1200" loading="lazy" decoding="async" alt="Сертификат Dahua Technology: ТОО «BestComKZ» — авторизованный партнёр в Казахстане, 2025 год">
+          <span class="cert__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.8 15.8 21 21M11 8.4v5.2M8.4 11h5.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="cert__brand" data-i="t097">Dahua</span>
+        <span class="cert__grade" data-i="t098">Авторизованный партнёр</span>
+        <span class="cert__t" data-i="t099">Второй крупный вендор в линейке — резерв по срокам и совместимости.</span>
+        <span class="cert__meta" data-i="c007">Сертификат 2025 года · ТОО «BestComKZ»</span>
+      </button>
+      <button class="cert rev" type="button" data-rev data-cert="assets/cert-imou-dealer.webp" data-cert-cap="IMOU · официальный дилер в Казахстане · сертификат 2026 года" data-cert-cap-kz="IMOU · Қазақстандағы ресми дилер · 2026 жылғы сертификат">
+        <span class="cert__shot">
+          <img src="assets/cert-imou-dealer.webp" data-i-alt="c105" width="918" height="1200" loading="lazy" decoding="async" alt="Сертификат дилера IMOU на территории Казахстана, 2026 год">
+          <span class="cert__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.8 15.8 21 21M11 8.4v5.2M8.4 11h5.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="cert__brand" data-i="t094">IMOU</span>
+        <span class="cert__grade" data-i="t095">Официальный дилер РК</span>
+        <span class="cert__t" data-i="t096">Официальный дилер: гарантийное и постгарантийное обслуживание на месте.</span>
+        <span class="cert__meta" data-i="c008">Сертификат дилера 2026 года</span>
+      </button>
+      </div>
     </div>
 
-    <p class="certs__cta rev" data-rev>
-      <a class="btn btn--ghost" href="https://wa.me/77000969967?text=Здравствуйте! Пришлите, пожалуйста, копии партнёрских сертификатов BestComKZ." target="_blank" rel="noopener" data-ch="whatsapp" data-contact="certs" data-i="n050">Смотреть сертификаты →</a>
-    </p>
+    <div class="certs__group rev" data-rev>
+      <p class="certs__gk" data-i="c018">Аттестации специалистов</p>
+      <div class="certs__grid certs__grid--3">
+      <button class="cert cert--person rev" type="button" data-rev data-cert="assets/cert-hcsa.webp" data-cert-cap="Hikvision Certified Security Associate · Ерлан Айчанов" data-cert-cap-kz="Hikvision Certified Security Associate · Ерлан Айчанов">
+        <span class="cert__shot">
+          <img src="assets/cert-hcsa.webp" data-i-alt="c106" width="1036" height="1024" loading="lazy" decoding="async" alt="Сертификат Hikvision Certified Security Associate на имя Ерлана Айчанова">
+          <span class="cert__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.8 15.8 21 21M11 8.4v5.2M8.4 11h5.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="cert__brand" data-i="t103">Hikvision HCSA</span>
+        <span class="cert__grade" data-i="t104">Certified Security Associate</span>
+        <span class="cert__t" data-i="t105">Личная аттестация директора компании — Ерлана Айчанова.</span>
+        <span class="cert__meta" data-i="c009">Сертификат HCSA-092020-0327-04-4240</span>
+      </button>
+      <button class="cert cert--person rev" type="button" data-rev data-cert="assets/cert-dahua-training.webp" data-cert-cap="Dahua Technology Kazakhstan · обучение по монтажу и пусконаладке · Ерлан Айчанов" data-cert-cap-kz="Dahua Technology Kazakhstan · монтаж және іске қосу бойынша оқыту · Ерлан Айчанов">
+        <span class="cert__shot">
+          <img src="assets/cert-dahua-training.webp" data-i-alt="c107" width="1200" height="838" loading="lazy" decoding="async" alt="Сертификат Dahua Technology Kazakhstan о прохождении обучения Ерланом Айчановым">
+          <span class="cert__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.8 15.8 21 21M11 8.4v5.2M8.4 11h5.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="cert__brand" data-i="c010">Dahua Technology</span>
+        <span class="cert__grade" data-i="c011">Монтаж и пусконаладка</span>
+        <span class="cert__t" data-i="c012">Обучение у вендора: монтаж и пусконаладка систем видеонаблюдения Dahua.</span>
+        <span class="cert__meta" data-i="c013">Сертификат №671 · Dahua Technology Kazakhstan</span>
+      </button>
+      <button class="cert cert--person rev" type="button" data-rev data-cert="assets/cert-bitrix24.webp" data-cert-cap="Битрикс24.CRM: Основы · Ерлан Айчанов · 14 ноября 2025 года" data-cert-cap-kz="«Битрикс24.CRM: Основы» · Ерлан Айчанов · 2025 жылғы 14 қараша">
+        <span class="cert__shot">
+          <img src="assets/cert-bitrix24.webp" data-i-alt="c108" width="848" height="1200" loading="lazy" decoding="async" alt="Сертификат «Битрикс24.CRM: Основы» на имя Ерлана Айчанова, ноябрь 2025 года">
+          <span class="cert__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.8 15.8 21 21M11 8.4v5.2M8.4 11h5.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="cert__brand" data-i="c014">Битрикс24</span>
+        <span class="cert__grade" data-i="c015">CRM: Основы</span>
+        <span class="cert__t" data-i="c016">Автоматизацию мы внедряем сами: курс «1С-Битрикс» сдан директором, а не подрядчиком.</span>
+        <span class="cert__meta" data-i="c017">Сертификат от 14.11.2025</span>
+      </button>
+      </div>
+    </div>
 
     <div class="brands rev" data-rev>
       <p class="brands__k" data-i="t106">Работаем с оборудованием</p>
@@ -1155,6 +1214,23 @@
   </div>
 </footer>
 
-<script src="script.js?v=20260826-4" defer></script>
+<!-- ЛАЙТБОКС ДОКУМЕНТОВ -->
+<div class="lbx" id="lbx" hidden role="dialog" aria-modal="true" aria-label="Просмотр документа" data-i-aria="c022">
+  <button class="lbx__x" type="button" data-lbx="close" aria-label="Закрыть" data-i-aria="c019">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lbx__nav lbx__nav--prev" type="button" data-lbx="prev" aria-label="Предыдущий документ" data-i-aria="c020">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 5l-8 7 8 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lbx__nav lbx__nav--next" type="button" data-lbx="next" aria-label="Следующий документ" data-i-aria="c021">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M9 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <figure class="lbx__fig">
+    <img class="lbx__img" id="lbxImg" src="" alt="">
+    <figcaption class="lbx__cap" id="lbxCap"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js?v=20260826-5" defer></script>
 </body>
 </html>
