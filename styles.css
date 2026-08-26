@@ -220,7 +220,7 @@ html[lang="kk"] .nav{gap:14px}
 html[lang="kk"] .nav a{font-size:14px}
 
 /* ---------- HERO ---------- */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero{position:relative;min-height:auto;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 .hero__bg{position:absolute;inset:0;z-index:-1}
 .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .hero__shade{
@@ -240,7 +240,7 @@ html[lang="kk"] .nav a{font-size:14px}
 }
 .hero__in{
   max-width:var(--wrap);margin:0 auto;width:100%;
-  padding:120px 20px 40px;
+  padding:124px 20px 56px;
   display:grid;gap:36px;
 }
 .chip{
@@ -304,7 +304,7 @@ html[lang="kk"] .nav a{font-size:14px}
 /* ticker */
 .ticker{
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  background:rgba(6,15,28,.72);overflow:hidden;padding:13px 0;margin-top:36px;
+  background:rgba(10,26,46,.72);overflow:hidden;padding:13px 0;margin-top:0;
 }
 .ticker__track{
   display:flex;gap:28px;align-items:center;width:max-content;
@@ -358,7 +358,7 @@ html[lang="kk"] .nav a{font-size:14px}
 .sechead__k::before{content:"";width:38px;height:2px;border-radius:2px;background:var(--grad);box-shadow:0 0 10px rgba(63,169,245,.6);flex:none}
 .sechead__h{
   font-family:var(--font-d);font-weight:700;margin-top:14px;
-  font-size:clamp(27px,4.4vw,44px);line-height:1.15;max-width:22ch;
+  font-size:clamp(27px,4.4vw,44px);line-height:1.15;max-width:26ch;
 }
 .sechead__s{margin-top:16px;max-width:62ch;color:var(--mut);font-size:clamp(15px,2vw,17px)}
 
@@ -1180,20 +1180,26 @@ html[lang="kk"] .nav a{font-size:14px}
   font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
   color:var(--mut);margin-bottom:16px;
 }
-.cases__list{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.cases__list li{
-  display:grid;grid-template-columns:auto 1fr;gap:3px 10px;align-items:center;
-  padding:12px 0;border-bottom:1px solid var(--line);
+.cases__list{
+  display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  align-items:stretch;
 }
-.cases__list i{grid-row:1;grid-column:1;align-self:center}
-.cases__list span{grid-row:1;grid-column:2}
-.cases__list em{grid-row:2;grid-column:2}
+.cases__list li{
+  display:flex;flex-direction:column;align-items:flex-start;gap:8px;
+  background:var(--card-bg);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--card-sh);padding:18px 20px;
+  transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease;
+}
+.cases__list li:hover{border-color:var(--card-hover-line);transform:translateY(-2px);box-shadow:var(--card-hover-sh)}
 .cases__list i{
   font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
   color:var(--acc-2);background:var(--acc-soft);padding:3px 8px;border-radius:5px;flex:none;
 }
-.cases__list span{font-weight:700;color:var(--white)}
-.cases__list em{font-style:normal;font-size:14px;color:var(--mut)}
+.cases__list span{
+  font-family:var(--font-d);font-weight:700;font-size:20px;line-height:1.2;
+  color:var(--white);
+}
+.cases__list em{font-style:normal;font-size:14.5px;color:var(--mut);margin-top:auto}
 .cases__note{margin-top:22px;font-size:15px;color:var(--mut)}
 
 /* ---------- ОТРАСЛИ ---------- */
@@ -1289,4 +1295,21 @@ html[lang="kk"] .nav a{font-size:14px}
   }
   .sticky-cta__wa svg{width:26px;height:26px}
   body{padding-bottom:82px}
+}
+
+
+/* ============================================================
+   Шапка секции на широком экране: заголовок слева, подзаголовок справа.
+   Раньше заголовок был зажат в 22ch и обрывался на середине полосы.
+   ============================================================ */
+@media(min-width:1000px){
+  .sechead{
+    display:grid;align-items:end;gap:18px 56px;
+    grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  }
+  .sechead__k{grid-column:1/-1}
+  .sechead__h{max-width:none;margin-top:0}
+  .sechead__s{margin-top:0;max-width:54ch;padding-bottom:8px}
+  /* если подзаголовка нет — заголовок занимает всю полосу */
+  .sechead:not(:has(.sechead__s)) .sechead__h{grid-column:1/-1;max-width:34ch}
 }
