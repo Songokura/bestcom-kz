@@ -1421,6 +1421,15 @@ body.lbx-open{overflow:hidden}
 .pagehero__t{margin-top:18px;color:var(--mut);font-size:clamp(15.5px,2vw,18px);line-height:1.6}
 .pagehero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 
+/* вторая дверь в первом экране: тем, кто пришёл не за камерами */
+.hero__alt{margin-top:16px;font-size:14.5px;color:var(--mut);line-height:1.5}
+.hero__alt a{
+  color:var(--acc-hi);font-weight:700;
+  border-bottom:1px solid rgba(127,212,255,.45);white-space:nowrap;
+}
+.hero__alt a:hover{border-bottom-color:currentColor}
+@media(max-width:520px){.hero__alt a{white-space:normal}}
+
 .bridge{padding:16px 0 70px}
 .bridge__in{
   display:grid;gap:22px;align-items:center;
