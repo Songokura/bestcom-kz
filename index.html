@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260826-13">
+  <link rel="stylesheet" href="styles.css?v=20260827-1">
 
   <script type="application/ld+json">
   {
@@ -771,11 +771,12 @@
       если что-то пошло не так. Это небольшая компания — и в этом её преимущество.</p>
     </header>
 
-    <!-- Фото сотрудников взяты с действующего сайта bestcom.kz (/media/team/person/),
-         перекадрированы под круглый аватар. У Айнагуль и Асимы фото нет —
-         там монограммы, разметка та же.
-         TBD: подтвердить у Ерлана написание имён (с сайта: Bekzat Qurmangalyiev,
-         Аиина Кадирбаева) и должности. -->
+    <!-- Фото: Ерлан, Бекзат, Мадина — с действующего сайта bestcom.kz (/media/team/person/);
+         Серик, Айнагуль, Темирбек — из постов @atyrau_bestcomkz (26.08.2026), студийные портреты;
+         Асима — файл от клиента 27.08.2026. Все перекадрированы под круглый аватар 440×440.
+         Имена в русской версии — русской транслитерацией (Серик, Темирбек, Айнагуль),
+         в казахской — Серік, Темірбек, Айнагүл: один алфавит внутри одной версии.
+         TBD: подтвердить у Ерлана фамилии Серика и Темирбека. -->
     <div class="team__grid">
       <article class="member member--lead rev" data-rev>
         <div class="member__ph"><img src="assets/team-erlan.webp" alt="Ерлан Айчанов — директор BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
@@ -787,12 +788,40 @@
         </div>
       </article>
       <article class="member rev" data-rev>
+        <div class="member__ph"><img src="assets/team-serik.webp" alt="Серик — руководитель технического отдела BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
+        <div class="member__body">
+          <p class="member__role" data-i="t260">Руководитель технического отдела</p>
+          <h3 class="member__name" data-i="t261">Серик</h3>
+          <p class="member__t" data-i="t262">Помогает выбрать систему под задачу объекта, а не по прайсу.
+          Следит за новинками рынка раньше, чем они доходят до клиента.</p>
+        </div>
+      </article>
+      <a class="member member--wa rev" data-rev href="https://wa.me/77000969967?text=Здравствуйте! Хочу обсудить безопасность объекта." target="_blank" rel="noopener" data-ch="whatsapp" data-contact="ainagul">
+        <div class="member__ph"><img src="assets/team-ainagul.webp" alt="Айнагуль — руководитель отдела продаж BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
+        <div class="member__body">
+          <p class="member__role" data-i="t152">Руководитель отдела продаж</p>
+          <h3 class="member__name" data-i="t153">Айнагуль</h3>
+          <p class="member__t" data-i="t154">Пятнадцать лет в продажах систем безопасности.
+          Видеонаблюдение, домофоны, СКУД. Отвечает в WhatsApp за 30 минут в рабочее время.</p>
+          <p class="member__link" data-i="t155">+7 700 096 99 67 — написать</p>
+        </div>
+      </a>
+      <article class="member rev" data-rev>
         <div class="member__ph"><img src="assets/team-bekzat.webp" alt="Бекзат Курмангалиев — технический специалист BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
         <div class="member__body">
           <p class="member__role" data-i="t143">Технический специалист</p>
           <h3 class="member__name" data-i="t144">Бекзат Курмангалиев</h3>
           <p class="member__t" data-i="t145">Сети, серверы, СКС и резервирование. Отвечает за то,
           чтобы камеры, доступы и CRM работали как одна система.</p>
+        </div>
+      </article>
+      <article class="member rev" data-rev>
+        <div class="member__ph"><img src="assets/team-temirbek.webp" alt="Темирбек — специалист по системам безопасности BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
+        <div class="member__body">
+          <p class="member__role" data-i="t263">Специалист по системам безопасности</p>
+          <h3 class="member__name" data-i="t264">Темирбек</h3>
+          <p class="member__t" data-i="t265">Монтаж и настройка систем на объекте. Много не говорит —
+          делает работу чётко и в срок, без лишних вопросов.</p>
         </div>
       </article>
       <article class="member rev" data-rev>
@@ -804,18 +833,8 @@
           без лишнего оборудования «на всякий случай».</p>
         </div>
       </article>
-      <a class="member member--wa rev" data-rev href="https://wa.me/77000969967?text=Здравствуйте! Хочу обсудить безопасность объекта." target="_blank" rel="noopener" data-ch="whatsapp" data-contact="ainagul">
-        <div class="member__ph"><span class="member__mono" aria-hidden="true">А</span></div>
-        <div class="member__body">
-          <p class="member__role" data-i="t152">Продажи · безопасность</p>
-          <h3 class="member__name" data-i="t153">Айнагуль</h3>
-          <p class="member__t" data-i="t154">Видеонаблюдение, домофоны, СКУД. Отвечает в WhatsApp
-          в течение 30 минут в рабочее время.</p>
-          <p class="member__link" data-i="t155">+7 700 096 99 67 — написать</p>
-        </div>
-      </a>
       <a class="member member--wa member--ice rev" data-rev href="https://wa.me/77472508062?text=Здравствуйте! Интересует FREEDO." target="_blank" rel="noopener" data-ch="whatsapp" data-contact="asima">
-        <div class="member__ph"><span class="member__mono" aria-hidden="true">А</span></div>
+        <div class="member__ph"><img src="assets/team-asima.webp" alt="Асима — продажи умных замков FREEDO, BestComKZ" width="440" height="440" loading="lazy" decoding="async"></div>
         <div class="member__body">
           <p class="member__role" data-i="t156">Продажи · FREEDO</p>
           <h3 class="member__name" data-i="t157">Асима</h3>
@@ -1096,6 +1115,6 @@
   </figure>
 </div>
 
-<script src="script.js?v=20260826-13" defer></script>
+<script src="script.js?v=20260827-1" defer></script>
 </body>
 </html>
