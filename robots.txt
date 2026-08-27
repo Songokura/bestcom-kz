@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.bestcom.kz/sitemap.xml
+Sitemap: https://security.bestcom.kz/sitemap.xml

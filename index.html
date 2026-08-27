@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BestComKZ — контроль и защита от потерь | Охранные системы в Атырау</title>
   <meta name="description" content="Безопасность бизнеса под ключ в Атырау: видеонаблюдение, СКУД с Face ID, домофоны, шлагбаумы, сигнализация и автоматизация. Проектируем, устанавливаем и обслуживаем. Бесплатный выезд и аудит объекта — отвечаем за 30 минут.">
-  <link rel="canonical" href="https://www.bestcom.kz/">
+  <link rel="canonical" href="https://security.bestcom.kz/">
   <meta name="theme-color" content="#060F1C" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#F4F7FB">
 
@@ -14,12 +14,12 @@
   <meta property="og:site_name" content="BestComKZ">
   <meta property="og:title" content="BestComKZ — контроль и защита от потерь">
   <meta property="og:description" content="Охранные системы и автоматизация в Атырау. 15+ лет, 20 000+ объектов по Казахстану. Бесплатный аудит безопасности объекта.">
-  <meta property="og:url" content="https://www.bestcom.kz/">
-  <meta property="og:image" content="https://www.bestcom.kz/assets/og-image.jpg">
+  <meta property="og:url" content="https://security.bestcom.kz/">
+  <meta property="og:image" content="https://security.bestcom.kz/assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BestComKZ — контроль и защита от потерь">
   <meta name="twitter:description" content="Охранные системы и автоматизация в Атырау. 15+ лет, 20 000+ объектов по Казахстану.">
-  <meta name="twitter:image" content="https://www.bestcom.kz/assets/og-image.jpg">
+  <meta name="twitter:image" content="https://security.bestcom.kz/assets/og-image.jpg">
 
   <link rel="icon" href="assets/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32">
@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260827-3">
+  <link rel="stylesheet" href="styles.css?v=20260827-4">
 
   <script type="application/ld+json">
   {
@@ -37,12 +37,12 @@
     "@type": "LocalBusiness",
     "name": "BestComKZ",
     "description": "Охранные системы и автоматизация бизнеса: видеонаблюдение, СКУД с Face ID, видеодомофоны, шлагбаумы, сигнализация, умные замки FREEDO, Bitrix24, AI-ассистенты.",
-    "url": "https://www.bestcom.kz/",
+    "url": "https://security.bestcom.kz/",
     "email": "info@bestcom.kz",
     "telephone": "+77000969967",
     "areaServed": { "@type": "Country", "name": "Казахстан" },
     "founder": { "@type": "Person", "name": "Ерлан Айчанов", "jobTitle": "Директор" },
-    "image": "https://www.bestcom.kz/assets/og-image.jpg",
+    "image": "https://security.bestcom.kz/assets/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Атырау",
@@ -1129,6 +1129,11 @@
   </figure>
 </div>
 
-<script src="script.js?v=20260827-3" defer></script>
+<!-- blocking="render" — из-за перехода между страницами. Словарь KZ лежит в script.js,
+     и без этого атрибута новая страница успевает нарисоваться по-русски, а перевод
+     встаёт кадром позже: при плавном переходе такой подмен виден. Атрибут просит
+     браузер не показывать первый кадр, пока скрипт не отработал. Кто атрибут
+     не знает — ведёт себя как раньше. -->
+<script src="script.js?v=20260827-4" defer blocking="render"></script>
 </body>
 </html>

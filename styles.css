@@ -110,6 +110,32 @@ body::after{
   *,*::before,*::after{animation-duration:.001s !important;animation-iteration-count:1 !important;transition-duration:.001s !important}
 }
 
+/* ---------- переход между страницами ----------
+   Главная и bitrix24 — два отдельных документа, и обычный переход между ними
+   даёт белую вспышку. Кросс-документные view transitions заменяют её
+   перекрёстным затуханием. Работает только внутри одного origin и только там,
+   где браузер это умеет (Chrome/Edge/Opera); Safari и Firefox просто переходят
+   как раньше — ломаться нечему, правило им неизвестно и игнорируется.
+   ⚠️ Оба документа обязаны объявить @view-transition, иначе перехода не будет.
+   Здесь это выполняется само: styles.css один на обе страницы. */
+@view-transition{navigation:auto}
+
+::view-transition-old(root),
+::view-transition-new(root){
+  animation-duration:.34s;
+  animation-timing-function:cubic-bezier(.22,.7,.3,1);
+}
+
+/* Шапка на обеих страницах одна и та же. Своё имя выносит её из общего снимка
+   в отдельный слой: при переходе она остаётся на месте, а не мигает вместе
+   с контентом. Если уходим из середины страницы (шапка светлая, .scrolled)
+   на верх новой (тёмная) — это тоже плавное перетекание, а не скачок. */
+.hdr{view-transition-name:hdr}
+
+@media (prefers-reduced-motion:reduce){
+  @view-transition{navigation:none}
+}
+
 /* ---------- кнопки ---------- */
 .btn{
   display:inline-flex;align-items:center;gap:.55em;
