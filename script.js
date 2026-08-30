@@ -549,11 +549,21 @@
     try { localStorage.setItem('bestcom-lang', lang); } catch (e) {}
   }
 
+  /* Язык из адреса: ?lang=ru | ?lang=kz. Нужен рекламе - объявления Google Ads
+     русские, и человек, однажды переключивший сайт на казахский, обязан попасть
+     на русскую версию, иначе это «Неподдерживаемый язык» и отклонение. */
+  function langFromUrl() {
+    var m = /[?&]lang=(ru|kz)(&|$)/i.exec(location.search);
+    return m ? m[1].toLowerCase() : null;
+  }
+
   function initLang() {
     captureRU();
+    var forced = langFromUrl();
     var saved = null;
     try { saved = localStorage.getItem('bestcom-lang'); } catch (e) {}
-    if (saved === 'kz') applyLang('kz'); else applyLang('ru');
+    /* адрес важнее сохранённого выбора; applyLang сам перезапишет localStorage */
+    applyLang(forced || (saved === 'kz' ? 'kz' : 'ru'));
     document.querySelectorAll('.lang__btn').forEach(function (b) {
       b.addEventListener('click', function () {
         var l = b.getAttribute('data-lang');

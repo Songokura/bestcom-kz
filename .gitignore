@@ -3,3 +3,7 @@ _project/
 .DS_Store
 *.log
 __*.html
+_deploy/
+*.zip
+_bc-*.png
+_v.html
