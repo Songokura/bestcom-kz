@@ -683,6 +683,7 @@
       (task ? '\nЧто беспокоит: ' + task : '');
     var url = 'https://wa.me/' + WA_MAIN + '?text=' + encodeURIComponent(msg);
     trackEvent('audit_form_submit', { channel: 'whatsapp', contact: 'ainagul', object_type: obj || 'not_set', lang: currentLang });
+    adsConversion('form');
     if (done) done.hidden = false;
     window.open(url, '_blank', 'noopener');
   }
@@ -705,6 +706,47 @@
       try { window.gtag('event', name, params || {}); } catch (e) {}
     }
   }
+
+  /* ---------- конверсии Google Ads (AW-18422633584) ----------
+     Три цели кабинета. Ярлыки менять только вместе с кабинетом:
+       tel   - «Интерактивные номера телефонов» (клик по номеру),
+       form  - «Отправка формы для потенциальных клиентов»,
+       contact - «Контакт» (WhatsApp, почта, Instagram, 2GIS).
+     Событие не блокирует переход: tel: и wa.me открывают внешнее
+     приложение, страница остаётся живой и запрос успевает уйти. */
+  var ADS_ID = 'AW-18422633584';
+  var ADS_LABELS = {
+    tel:     'X1pjCL-bjuwcEPCozNBE',
+    form:    'HQOjCISvjewcEPCozNBE',
+    contact: 'dUaCCN20jewcEPCozNBE'
+  };
+
+  function adsConversion(kind, url) {
+    var label = ADS_LABELS[kind];
+    if (!label || typeof window.gtag !== 'function') {
+      if (url) window.location = url;
+      return false;
+    }
+    var sent = false;
+    var go = function () {
+      if (sent) return;
+      sent = true;
+      if (url) window.location = url;
+    };
+    try {
+      window.gtag('event', 'conversion', {
+        'send_to': ADS_ID + '/' + label,
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': go
+      });
+    } catch (e) { go(); return false; }
+    if (url) window.setTimeout(go, 1200); /* страховка, если колбэк не пришёл */
+    return false;
+  }
+
+  /* Совместимость со снипетом Google: onclick="return gtag_report_conversion(url)" */
+  window.gtag_report_conversion = function (url) { return adsConversion('tel', url); };
 
   /* ---------- раскрывающиеся контакты ----------
      Раскрытие вкладки = «получение контакта», основная цель конверсии. */
@@ -734,6 +776,8 @@
       section: sec ? (sec.id || (sec.className || '').split(' ')[0]) : '',
       lang: currentLang
     });
+    /* телефон - отдельная цель, остальные каналы идут в «Контакт» */
+    adsConversion(ch === 'tel' ? 'tel' : 'contact');
   }
   document.addEventListener('click', handleContactClick);
 
